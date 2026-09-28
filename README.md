@@ -49,7 +49,7 @@ You also need accounts/keys for external services once the app is wired up. Star
 
 ## Running locally
 
-The desk runs without Supabase or an OpenAI key. Answers are quotations from a local corpus: the latest 10-K for Apple, Microsoft, NVIDIA, Amazon, and Alphabet, extracted from SEC EDGAR into `backend/app/corpus/seed.json`. Sign in with any email. That session stays on this machine.
+The desk runs without Supabase or an OpenAI key. Without a key, answers are short prose built from the most relevant sentences in a local corpus: the latest 10-K for Apple, Microsoft, NVIDIA, Amazon, and Alphabet, extracted from SEC EDGAR into `backend/app/corpus/seed.json`. Set `OPENAI_API_KEY` in `backend/.env` (and optionally `OPENAI_MODEL`, default `gpt-4o-mini`) to have a model write that prose instead. Either way, a question the filings do not cover is refused, and every grounded claim keeps a citation. Sign in with any email. That session stays on this machine.
 
 ```bash
 # backend — from the repo root

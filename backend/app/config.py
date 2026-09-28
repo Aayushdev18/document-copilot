@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     supabase_anon_key: str | None = None
     supabase_service_role_key: str | None = None
     openai_api_key: str | None = None
+    openai_model: str = "gpt-4o-mini"
 
     @model_validator(mode="after")
     def require_mode_secrets(self) -> "Settings":

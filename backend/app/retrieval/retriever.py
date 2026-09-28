@@ -80,19 +80,20 @@ STOPWORDS = {
     "such",
 }
 
-COMPANY_TERMS = {
-    "apple",
-    "aapl",
-    "microsoft",
-    "msft",
-    "nvidia",
-    "nvda",
-    "amazon",
-    "amzn",
-    "alphabet",
-    "google",
-    "googl",
+TICKER_ALIASES = {
+    "apple": "AAPL",
+    "aapl": "AAPL",
+    "microsoft": "MSFT",
+    "msft": "MSFT",
+    "nvidia": "NVDA",
+    "nvda": "NVDA",
+    "amazon": "AMZN",
+    "amzn": "AMZN",
+    "alphabet": "GOOGL",
+    "google": "GOOGL",
+    "googl": "GOOGL",
 }
+COMPANY_TERMS = set(TICKER_ALIASES)
 
 
 @dataclass(frozen=True)
@@ -169,6 +170,11 @@ def search_passages(session: Session, question: str, *, limit: int = 3) -> list[
 
     needed = 2 if len(content_terms) >= 2 else 1
     eligible = [chunk_id for chunk_id in lexical_ids if hits(chunk_id) >= needed]
+    named = {TICKER_ALIASES[term] for term in terms if term in TICKER_ALIASES}
+    if named:
+        focused = [chunk_id for chunk_id in eligible if by_id[chunk_id].ticker in named]
+        if focused:
+            eligible = focused
     if not eligible:
         return []
 

@@ -31,6 +31,7 @@ def test_compose_quotes_only_retrieved_text() -> None:
     assert answer.insufficient_evidence is False
     assert answer.citations[0].excerpt in source.text
     assert "Apple Inc." in answer.answer
+    assert "[1]" in answer.answer
     validate_grounding(answer, [source])
 
 

@@ -50,7 +50,7 @@ export function Composer({ running, onSubmit }: ComposerProps) {
         </Button>
       </form>
       <p className="mx-auto mt-2 max-w-3xl text-xs text-muted-foreground">
-        Quotations from the loaded 10-Ks. Not a recommendation.
+        Written from the loaded 10-Ks, with a citation on every claim. Not a recommendation.
       </p>
     </div>
   )

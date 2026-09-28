@@ -43,9 +43,9 @@ export function Transcript({
               Ask a filing.
             </h1>
             <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
-              Answers are quotations from the latest 10-K on the desk for Apple, Microsoft,
-              NVIDIA, Amazon, and Alphabet. If the passage is not in the corpus, the copilot
-              says so.
+              Answers are written in prose from the latest 10-K on the desk for Apple,
+              Microsoft, NVIDIA, Amazon, and Alphabet, and every claim stays tied to a
+              passage. If the filings do not cover the question, the copilot says so.
             </p>
             {corpus && (
               <p className="mt-3 font-mono text-xs text-muted-foreground">

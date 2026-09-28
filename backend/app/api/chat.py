@@ -257,11 +257,12 @@ def _prepare_turn(
             )
         )
         passages = search_passages(session, message)
-        grounded = compose_answer(passages)
+        grounded = compose_answer(passages, message)
+        by_chunk = {passage.chunk_id: passage for passage in passages}
         payloads: list[dict] = []
-        for citation, passage in zip(grounded.citations, passages, strict=True):
+        for citation in grounded.citations:
             payload = citation.model_dump(by_alias=True)
-            payload["passage"] = passage.text
+            payload["passage"] = by_chunk[citation.chunk_id].text
             payloads.append(payload)
         thread.updated_at = now
         session.commit()
