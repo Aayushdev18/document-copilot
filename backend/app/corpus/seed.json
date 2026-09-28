@@ -1,0 +1,789 @@
+{
+  "documents": [
+    {
+      "ticker": "AAPL",
+      "cik": "0000320193",
+      "company": "Apple Inc.",
+      "form": "10-K",
+      "accession_number": "0000320193-25-000079",
+      "filing_date": "2025-10-31",
+      "report_date": "2025-09-27",
+      "year": "2025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "chunks": [
+        {
+          "section": "Item 1. Business",
+          "text": "Wearables includes smartwatches, wireless headphones and spatial computers. The Company\u2019s line of smartwatches, based on its watchOS\u00ae operating system, includes Apple Watch\u00ae Series 11, Apple Watch SE\u00ae 3 and Apple Watch Ultra\u00ae 3. The Company\u2019s line of wireless headphones includes AirPods\u00ae, AirPods Pro\u00ae, AirPods Max\u00ae and Beats\u00ae products. Apple Vision Pro\u2122 is the Company\u2019s spatial computer based on its visionOS\u00ae operating system."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Company offers a portfolio of fee-based service and support products under the AppleCare\u00ae brand. The offerings provide priority access to Apple technical support, access to the global Apple authorized service network for repair and replacement services, and in many cases additional coverage for instances of accidental damage or theft and loss, depending on the country and type of product."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Company also offers digital content through subscription-based services, including Apple Arcade\u00ae, a game service; Apple Fitness+\u00ae, a personalized fitness service; Apple Music\u00ae, which offers users a curated listening experience with on-demand radio stations; Apple News+\u00ae, a news and magazine service; and Apple TV\u00ae, which offers exclusive original content and live sports."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Company manages its business primarily on a geographic basis. The Company\u2019s reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific. Americas includes both North and South America. Europe includes European countries, as well as India, the Middle East and Africa. Greater China includes China mainland, Hong Kong and Taiwan. Rest of Asia Pacific includes Australia, New Zealand and those Asian countries not included in the Company\u2019s other reportable segments. Although the reportable segments provide similar hardware and software products and similar services, each one is managed separately to better align with the location of the Company\u2019s customers and distribution partners and the unique market dynamics of each geographic region."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Company\u2019s customers are primarily in the consumer, small and mid-sized business, education, enterprise and government markets. The Company sells its products and resells third-party products in most of its major markets directly to customers through its retail and online stores and its direct sales force. The Company sells its services in the same markets through its various service platforms. The Company also employs a variety of indirect distribution channels, such as third-party cellular network carriers and other resellers, for the sale of its products and certain of its services. During 2025, the Company\u2019s net sales through its direct and indirect distribution channels accounted for 40% and 60%, respectively, of total net sales."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The markets for the Company\u2019s products and services are highly competitive and are characterized by aggressive price competition, downward pressure on gross margins, continual improvement in product performance, and price sensitivity on the part of consumers and businesses. The markets in which the Company competes are further defined by frequent introduction of new products and services, short product life cycles, evolving industry standards, and rapid adoption of technological advancements by competitors. Many of the Company\u2019s competitors seek to compete primarily through aggressive pricing and very low cost structures, and by imitating the Company\u2019s products and infringing on its intellectual property."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Company\u2019s ability to compete successfully depends heavily on ensuring the continuing and timely introduction of innovative new products, services and technologies to the marketplace. The Company designs and develops nearly the entire solution for its products, including the hardware, operating system, numerous software applications and related services. Principal competitive factors important to the Company include price, product and service features (including security features), relative price and performance, product and service quality and reliability, design and technology innovation, a strong third-party software and accessories ecosystem, marketing and distribution capability, service and support, corporate reputation, and the ability to effectively protect and enforce the Company\u2019s intellectual property rights."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Company is focused on expanding its market opportunities related to smartphones, personal computers, tablets, wearables and accessories, and services. The Company\u2019s products and services face substantial competition from companies that have significant technical, marketing, distribution and other resources, as well as established hardware, software, and service offerings with large customer bases. In addition, the Company faces significant competition as competitors imitate the Company\u2019s product features and applications within their products to offer more competitive solutions. The Company also expects competition to intensify as competitors imitate the Company\u2019s approach to providing components seamlessly within their offerings or work collaboratively to offer integrated solutions. Some of the Company\u2019s competitors have broad product lines, low-priced products, large installed bases of active devices, and large customer bases. Competition has been particularly intense as competitors have aggressively cut prices and lowered product margins. Certain competitors have the"
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Although most components essential to the Company\u2019s business are generally available from multiple sources, certain components are currently obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations. Restrictions on international trade can increase the cost or limit the availability of the Company\u2019s products and the components and rare earths and other raw materials that go into them."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Company uses some custom components that are not commonly used by its competitors, and new products introduced by the Company often utilize custom components available from only one source. When a component or product uses new technologies, initial capacity constraints may exist until the suppliers\u2019 yields have matured or their manufacturing capacities have increased. The Company has entered into agreements for the supply of many components; however, the Company may not be able to extend or renew agreements for the supply of components on similar terms, or at all, and may not be successful in obtaining sufficient quantities from its suppliers or in a timely manner, or in identifying and obtaining sufficient quantities from an alternative source. In addition, component suppliers may fail, be subject to consolidation within a particular industry, or decide to concentrate on the production of common components instead of components customized to meet the Company\u2019s requirements, further limiting the Company\u2019s ability to obtain sufficient quantities of components on commercially"
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Because the industries in which the Company competes are characterized by rapid technological advances, the Company\u2019s ability to compete successfully depends heavily upon its ability to ensure a continual and timely flow of competitive products, services and technologies to the marketplace. The Company continues to develop new technologies to enhance existing products and services, and to expand the range of its offerings through research and development (\u201cR&D\u201d), licensing of intellectual property and acquisition of third-party businesses and technology."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Company currently holds a broad collection of intellectual property rights relating to certain aspects of its hardware, software and services. This includes patents, designs, copyrights, trademarks, trade secrets and other forms of intellectual property rights in the U.S. and various foreign countries. Although the Company believes the ownership of such intellectual property rights is an important factor in differentiating its business and that its success does depend in part on such ownership, the Company relies primarily on the innovative skills, technical competence and marketing abilities of its personnel."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "The following summarizes factors that could have a material adverse effect on the Company\u2019s business, reputation, results of operations, financial condition and stock price. The Company may not be able to accurately predict, control or mitigate these risks. Statements in this section are based on the Company\u2019s beliefs and opinions regarding matters that could materially adversely affect the Company in the future and are not representations as to whether such matters have or have not occurred previously. The risks and uncertainties described below are not exhaustive and should not be considered a complete statement of all potential risks or uncertainties that the Company faces or may face in the future."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "This section should be read in conjunction with Part II, Item 7, \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d and the consolidated financial statements and accompanying notes in Part II, Item 8, \u201cFinancial Statements and Supplementary Data\u201d of this Form 10-K."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "The Company has international operations with sales outside the U.S. representing a majority of the Company\u2019s total net sales. In addition, the Company\u2019s global supply chain is large and complex and a majority of the Company\u2019s supplier facilities, including manufacturing and assembly sites, are located outside the U.S. As a result, the Company\u2019s operations and performance depend significantly on global and regional economic conditions."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Adverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand for the Company\u2019s products and services. In addition, consumer confidence and spending can be materially adversely affected in response to changes in fiscal and monetary policy, financial market volatility, declines in income or asset values, and other economic factors."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Uncertainty about, or a decline in, global or regional economic conditions can also have a significant impact on the Company\u2019s suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners, and developers. Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company\u2019s trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company\u2019s ability to issue new debt; reduced liquidity; and declines in the fair values of the Company\u2019s financial instruments. These and other impacts can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Political events, trade and other international disputes, geopolitical tensions, conflict, terrorism, natural disasters, public health issues, industrial accidents and other business interruptions can have a material adverse effect on the Company and its customers, employees, suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "The Company has a large, global business with sales outside the U.S. representing a majority of the Company\u2019s total net sales, and the Company believes that it generally benefits from growth in international trade. A significant majority of the Company\u2019s manufacturing is performed in whole or in part by outsourcing partners located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam, in addition to sourcing from partners and facilities located in the U.S. Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s business and supply chain. The impact can be particularly significant if these restrictive measures apply to countries and regions where the Company derives a significant portion of its revenues and/or has significant supply chain operations. Restrictive measures can increase the cost or limit the availability of the Company\u2019s products and the components and rare earths and other raw materials that go into them. Restrictive measures can also"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Many of the Company\u2019s operations, retail stores and facilities, as well as critical business operations of the Company\u2019s suppliers and contract manufacturers, are in locations that are prone to earthquakes and other natural disasters. Global climate change is resulting in certain types of natural disasters and extreme weather occurring more frequently or with more intense effects. In addition, the Company\u2019s and its suppliers\u2019 operations, retail stores and facilities are subject to the risk of interruption by fire, power shortages, nuclear power plant accidents and other industrial accidents, terrorist attacks and other hostile acts, ransomware and other cybersecurity attacks, labor disputes, public health issues and other events beyond the Company\u2019s control."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Such events can make it difficult or impossible for the Company to manufacture and deliver products to its customers, create delays and inefficiencies in the Company\u2019s supply and manufacturing chain, result in slowdowns and outages to the Company\u2019s service offerings, increase the Company\u2019s costs, and negatively impact consumer spending and demand in affected areas."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "The Company\u2019s operations are also subject to the risks of industrial accidents at its suppliers and contract manufacturers. While the Company\u2019s suppliers are required to maintain safe working environments and operations, an industrial accident could occur and could result in serious injuries or loss of life, disruption to the Company\u2019s business, and harm to the Company\u2019s reputation. Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Following any interruption to its business, the Company can require substantial recovery time, incur significant expenditures to resume operations, and lose significant sales. Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company. While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise. Any of the foregoing can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The following discussion should be read in conjunction with the consolidated financial statements and accompanying notes included in Part II, Item 8 of this Form 10-K. This Item generally discusses 2025 and 2024 items and year-to-year comparisons between 2025 and 2024. Discussions of 2023 items and year-to-year comparisons between 2024 and 2023 are not included, and can be found in \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d in Part II, Item 7 of the Company\u2019s Annual Report on Form 10-K for the fiscal year ended September 28, 2024."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The Company\u2019s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company\u2019s fiscal quarters with calendar quarters, which occurred in the first quarter of 2023. The Company\u2019s fiscal years 2025 and 2024 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Beginning in the second quarter of 2025, new U.S. Tariffs were announced, including additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam and the EU, among others. In response, several countries have imposed, or threatened to impose, reciprocal tariffs on imports from the U.S. and other retaliatory measures. Various modifications to the U.S. Tariffs have been announced and further changes could be made in the future, which may include additional sector-based tariffs or other measures. For example, the U.S. Department of Commerce has initiated an investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into, among other things, imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors. Tariffs and other measures that are applied to the Company\u2019s products or their components can have a material adverse impact on the Company\u2019s business, results of operations and financial condition, including impacting the Company\u2019s supply chain, the"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The Company\u2019s effective tax rate for 2025 was lower than the statutory federal income tax rate primarily due to a lower effective tax rate on foreign earnings, including the impact of changes in unrecognized tax benefits, the impact of the U.S. federal R&D credit, and tax benefits from share-based compensation, partially offset by a change in valuation allowance and state income taxes."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The Company\u2019s effective tax rate for 2025 was lower compared to 2024 due to a $10.7 billion year-over-year decrease in the provision for income taxes related to the State Aid Decision (refer to Note 7, \u201cIncome Taxes\u201d in the Notes to Consolidated Financial Statements in Part II, Item 8 of this Form 10-K) and the impact of changes in unrecognized tax benefits, partially offset by a change in valuation allowance and a higher effective tax rate on foreign earnings."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The Company believes its balances of cash, cash equivalents and marketable securities, which totaled $132.4 billion as of September 27, 2025, along with cash generated by ongoing operations and continued access to debt markets, will be sufficient to satisfy its cash requirements and capital return program over the next 12 months and beyond."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "As of September 27, 2025, the Company had outstanding fixed-rate notes with varying maturities for an aggregate principal amount of $91.3 billion (collectively the \u201cNotes\u201d), with $12.4 billion payable within 12 months. Future interest payments associated with the Notes total $37.0 billion, with $2.6 billion payable within 12 months."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The Company utilizes several outsourcing partners to manufacture subassemblies for the Company\u2019s products and to perform final assembly and testing of finished products. The Company also obtains individual components for its products from a wide variety of individual suppliers. As of September 27, 2025, the Company had manufacturing purchase obligations of $56.2 billion, with $55.4 billion payable within 12 months."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The Company\u2019s other purchase obligations primarily consist of noncancelable obligations to acquire capital assets, including assets related to product manufacturing, and noncancelable obligations related to supplier arrangements, licensed intellectual property and content, and distribution rights. As of September 27, 2025, the Company had other purchase obligations of $14.8 billion, with $7.0 billion payable within 12 months."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "In addition to its contractual cash requirements, the Company has an authorized share repurchase program. The program does not obligate the Company to acquire a minimum amount of shares. As of September 27, 2025, the Company\u2019s quarterly cash dividend was $0.26 per share. The Company intends to increase its dividend on an annual basis, subject to declaration by the Board."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "In May 2025, the Company announced a new share repurchase program of up to $100 billion and raised its quarterly dividend from $0.25 to $0.26 per share beginning in May 2025. During 2025, the Company repurchased $89.3 billion of its common stock and paid dividends and dividend equivalents of $15.4 billion."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "In September 2025, the Financial Accounting Standards Board (\u201cFASB\u201d) issued Accounting Standards Update (\u201cASU\u201d) No. 2025-06, Intangibles\u2014Goodwill and Other\u2014Internal-Use Software (Subtopic 350-40): Targeted Improvements to the Accounting for Internal-Use Software (\u201cASU 2025-06\u201d), which modernizes the accounting for internal-use software. ASU 2025-06 removes all references to software development stages and requires capitalization of software costs when management has committed to the software project and it is probable the software will be completed and perform its intended use. ASU 2025-06 will be effective for the Company in its first quarter of 2029, and early adoption is permitted. The Company is currently evaluating the timing and method of its adoption of ASU 2025-06."
+        }
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "cik": "0000789019",
+      "company": "Microsoft Corporation",
+      "form": "10-K",
+      "accession_number": "0001193125-26-323660",
+      "filing_date": "2026-07-29",
+      "report_date": "2026-06-30",
+      "year": "2026",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "chunks": [
+        {
+          "section": "Item 1. Business",
+          "text": "We develop and support a broad portfolio of technology solutions for individuals and businesses, focusing on secure, trusted, and innovative platforms and applications that meet evolving customer needs across AI, cloud computing, productivity and collaboration, and personal computing. We strive to create opportunity, growth, and impact in every country around the world."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Microsoft Cloud provides integration across the technology stack while offering openness, improving time to value, reducing costs, and increasing agility. Our cloud business benefits from three economies of scale: datacenters that deploy computational resources at significantly lower cost per unit than smaller ones; datacenters that coordinate and aggregate diverse customer, geographic, and application demand patterns, improving the utilization of computing, storage, and network resources; and multi-tenancy locations that lower application maintenance labor costs."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We are focused on helping customers use the breadth and depth of the Microsoft Cloud to get the most value out of their digital spend while leading the AI platform wave across our solution areas. We continue to develop complete, intelligent solutions for our customers that empower people to be productive and collaborate, while safeguarding businesses and simplifying IT management. Our goal is to lead the industry in several distinct areas of technology over the long term, which we expect will translate to sustained growth. We are investing significant resources in:"
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Microsoft is committed to sustainability and our approach to addressing climate change starts with the sustainability of our own business. In 2020, we announced goals to become a carbon negative, water positive, and zero waste company by 2030. Since announcing these goals, we have seen major changes in both the technology sector and in our understanding of what it will take to meet our goals. More information about our progress toward these goals can be found in our annual Environmental Sustainability Report."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We operate our business and report our financial performance using three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing. Our segments provide management with a comprehensive financial view of our key businesses. The segments enable the alignment of strategies and objectives across the development, sales, marketing, and services organizations, and they provide a framework for timely and rational allocation of resources within businesses."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Microsoft 365 Commercial products and cloud services, including Microsoft 365 Commercial cloud, comprising Microsoft 365 Commercial, Enterprise Mobility + Security, the cloud portion of Windows Commercial, the per-user portion of Power BI, Exchange, SharePoint, Microsoft Teams, Microsoft 365 Security and Compliance, and Microsoft 365 Copilot; and Microsoft 365 Commercial products, comprising Windows Commercial on-premises and Office licensed on-premises."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Microsoft 365 Commercial is an AI-powered business and productivity solutions platform that brings together Office, Windows, Microsoft 365 Copilot, and Enterprise Mobility + Security to help organizations empower their employees. Growth depends on our ability to reach new users in new markets such as frontline workers, small and medium businesses, and growth markets, as well as add AI-enabled tools, features, and agentic scenarios to our core product and service offerings across communication, collaboration, analytics, security, compliance, and other AI business productivity categories. Microsoft 365 Commercial revenue is mainly affected by a combination of continued installed base growth and average revenue per user expansion, as well as the continued shift from Office licensed on-premises to Microsoft 365."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Microsoft 365 Consumer is designed to increase personal productivity and creativity through a range of products and services. Growth depends on our ability to reach new users, add value to our core product set with new features including AI tools, and continue to expand our product and service offerings into new markets. Microsoft 365 Consumer cloud revenue and Office Consumer products revenue is mainly affected by the percentage of customers that buy Office with their new devices and the continued shift from Office licensed on-premises to Microsoft 365 Consumer subscriptions. Microsoft 365 Consumer cloud revenue is also affected by the demand for communication and storage through Outlook.com and OneDrive, which is largely driven by subscriptions and advertising."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "LinkedIn connects the world\u2019s professionals to make them more productive and successful and transforms the way companies hire, market, sell, and learn. In addition to LinkedIn\u2019s free services, LinkedIn offers monetized solutions designed to offer AI-enabled insights and productivity: Talent Solutions, Marketing Solutions, Premium Subscriptions, and Sales Solutions. Growth will depend on our ability to increase LinkedIn member engagement on the platform and our ability to continue offering insight and AI-enabled services that provide value for our members and customers. LinkedIn revenue is mainly affected by demand from enterprises and professionals for subscriptions to Talent Solutions, Sales Solutions, and Premium Subscriptions offerings, as well as member engagement and the quality of the sponsored content delivered to those members to drive Marketing Solutions."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Dynamics provides cloud-based and on-premises business solutions for financial management, enterprise resource planning (\u201cERP\u201d), customer relationship management (\u201cCRM\u201d), and supply chain management, as well as agentic AI and other low code application development platforms, for small and medium businesses, large organizations, and divisions of global enterprises. Dynamics revenue is driven by the number of users licensed and applications consumed, expansion of average revenue per user, and the continued shift to Dynamics 365, a unified set of cloud-based intelligent business applications, including our low code development platforms, such as Power Apps and Power Automate."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Competitors to Office include software and global application vendors, web-based and mobile application companies, AI-first application companies, as well as local application developers. We compete by providing secure, integrated industry-specific, and easy-to-use productivity and collaboration tools and services that create comprehensive solutions and work well with technologies our customers already have both on-premises or in the cloud."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "LinkedIn faces competition from online professional networks; recruiting, talent management, and human resource services companies; job boards; companies that provide learning and development products and services; online and offline outlets that generate revenue from advertisers and marketers; and online and offline outlets for companies with lead generation and customer intelligence and insights."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Our operations and financial results are subject to various risks and uncertainties, including those described below, that could adversely affect our business, operations, financial condition, results of operations, liquidity, and the trading price of our common stock. Statements in this section reflect our beliefs and opinions as to matters that could adversely affect us in the future. References to past events are provided by way of example only and are not intended to be a complete listing or a representation as to whether or not such matters have occurred in the past."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Our competitors range in size from diversified global companies with significant research and development resources to small, specialized firms who may be more effective in deploying technical, marketing, and financial resources. Barriers to entry in many of our businesses are low and many of the areas in which we compete evolve rapidly with changing and disruptive technologies, shifting user needs, and frequent introductions of new products and services. If we do not continue to innovate and provide products, devices, and services that appeal to businesses and consumers, we may not remain competitive, which could adversely affect our business, financial condition, and results of operations."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "An important element of our business model has been to create platform-based ecosystems on which many participants can build diverse solutions. A well-established ecosystem creates beneficial network effects among users, application developers, and the platform provider that can accelerate growth. Establishing significant scale in the marketplace is necessary to meet consumer demand and to achieve and maintain attractive margins. Firms offering competing platforms may make it more difficult to attract and retain customers."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "A competing vertically-integrated model, in which a single firm controls the hardware and software elements of a product and related services, has succeeded with some consumer products such as PCs, tablets, smartphones, gaming consoles, wearables, and other endpoint devices. Competitors pursuing this model also earn revenue from services integrated with the hardware and software platform, including applications and content sold through their integrated marketplaces. They may also be able to claim security and performance benefits from their vertically-integrated offer. We also offer some vertically-integrated hardware and software products and services. Expansion of our vertically-integrated capabilities, including developing proprietary hardware, infrastructure, and artificial intelligence (\u201cAI\u201d) models, could increase our cost structure, reduce margins, and expose us to operational risks."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We derive substantial revenue from licenses of Windows operating systems on PCs. We face significant competition from competing platforms developed for new types of devices, including smartphones and tablets. These devices compete on multiple bases including price and the perceived utility of the device and its platform. Users continue to turn to these devices to perform functions that in the past were performed by PCs. Even if many users view these devices as complementary to a PC, the prevalence of these devices may make it more difficult to attract application developers to our PC operating system platforms. Competing with operating systems licensed at low or no cost may decrease our PC operating system margins. Popular products or services offered on competing platforms could increase their competitive strength. In addition, some of our devices compete with products made by our OEM partners, which may affect their commitment to our platform."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Competing platforms have content and application marketplaces with scale and significant installed bases. The variety and utility of content and applications available on a platform are important to device purchasing decisions. Users may incur costs to move data and buy new content and applications when switching platforms. To compete successfully, we must enlist developers to write applications for our platform and ensure that these applications have high quality, security, customer appeal, and value. Efforts to compete with competitors\u2019 content and application marketplaces may increase our cost of revenue and lower our operating margins. Competitors\u2019 rules governing their content and applications marketplaces may restrict our ability to distribute products and services through them in accordance with our technical and business model objectives."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We are investing in AI across the entire company and infusing AI capabilities into our offerings. AI technology and services are a highly competitive and rapidly evolving market, and new competitors continue to enter the market. Our AI offerings compete with AI products from hyperscalers, open-source offerings, and frontier model providers, some of which are also current or potential partners. To compete effectively we must also be responsive to technological change, new and potential regulatory developments, and public scrutiny."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Even as we transition more of our business to infrastructure-, platform-, and software-as-a-service business models, the license-based proprietary software model generates a substantial portion of our software revenue. We bear the costs of converting original ideas into software products through investments in research and development, offsetting these costs with the revenue received from licensing our products. Many of our competitors also develop and sell software to businesses and consumers under this model."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Some companies compete with us by modifying and then distributing open-source software at little or no cost to end users, developing, making available, or using AI models that are open, and earning revenue on advertising or integrated products and services. These firms do not bear the full costs of research and development for the open-source products. Some open-source products mimic the features and functionality of our products."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Our cloud and AI strategy requires substantial investments and depends on evolving customer demand, technological developments, competitive dynamics, and regulatory conditions, any of which could adversely affect our business, financial condition, and results of operations. We have made and are continuing to make significant capital and operational investments to develop, train, deploy, and support AI models and related cloud-based services, including building and expanding datacenters, acquiring necessary components, and securing energy resources. These investments are being made at significant scale and on an accelerated timeline, require substantial and increasing capital expenditures and continued access to capital, and are in advance of fully developed revenue streams. The associated revenue may not be realized in the expected timeframes or at expected levels. Our capital and operational investments are complex and involve projects in multiple locations around the world that expose us to increased compliance risks and political challenges, among others. Our ability to fund"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Demand for cloud-based and AI products and services is evolving and difficult to forecast. Overestimation of demand or misalignment of capacity investments may result in underutilization of infrastructure and may lead to impairment of assets on our balance sheet. Conversely, demand exceeding available capacity limits our ability to meet customer needs in a timely manner."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "The cost structure for AI products and services is subject to significant uncertainty, including with respect to model training and inference costs, the availability and pricing of components, and energy costs. If these costs increase, remain elevated, or fail to decline, or if pricing for AI products and services declines as a result of competition, commoditization, or other market forces, our margins, financial condition, and results of operations could be adversely affected."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The following Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations (\u201cMD&A\u201d) is intended to help the reader understand the results of operations and financial condition of Microsoft Corporation. MD&A is provided as a supplement to, and should be read in conjunction with, our consolidated financial statements and the accompanying Notes to Financial Statements (Part II, Item 8 of this Form 10-K). This section generally discusses the results of our operations for the year ended June 30, 2026 compared to the year ended June 30, 2025. For a discussion of the year ended June 30, 2025 compared to the year ended June 30, 2024, please refer to Part II, Item 7, \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d in our Annual Report on Form 10-K for the year ended June 30, 2025."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Microsoft is a technology company committed to making digital technology and artificial intelligence (\u201cAI\u201d) available broadly and doing so responsibly, with a mission to empower every person and every organization on the planet to achieve more. We create platforms and applications, powered by AI, that deliver innovative solutions that meet the evolving needs of our customers."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We generate revenue by offering a wide range of cloud-based solutions, content, and other services to people and businesses; licensing and supporting an array of software products; delivering relevant online advertising to a global audience; and designing and selling devices. Our most significant expenses are related to compensating employees; supporting and investing in our cloud-based services, including datacenter operations; designing, manufacturing, marketing, and selling our other products and services; and income taxes."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our industry is dynamic and highly competitive, with frequent changes in both technologies and business models. Each industry shift is an opportunity to conceive new products, new technologies, or new ideas that can further transform the industry and our business. At Microsoft, we push the boundaries of what is possible through a broad range of research and development activities that seek to identify and address the changing demands of customers and users, industry trends, and competitive forces."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We have a long-term strategic partnership with OpenAI which was originally established in 2019. In October 2025 and April 2026, we extended this partnership and continue to build on our shared vision to advance artificial intelligence responsibly and make its benefits broadly accessible. Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments. We hold rights to OpenAI\u2019s intellectual property, including models and infrastructure, for integration into our products."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The markets for software, devices, and cloud-based services are dynamic and highly competitive. Our competitors are developing new software and devices, while also deploying competing cloud-based services for consumers and businesses. The devices and form factors customers prefer evolve rapidly, influencing how users access services in the cloud and, in some cases, the user\u2019s choice of which suite of cloud-based services to use. Aggregate demand for our software, services, and devices is also correlated to global macroeconomic and geopolitical factors, which remain dynamic. We must continue to evolve and adapt over an extended time in pace with this changing environment."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The investments we are making in cloud and AI infrastructure and devices will continue to increase our operating costs and may decrease our operating margins. We continue to identify and evaluate opportunities to expand our datacenter locations and increase our server capacity to meet the evolving needs of our customers, particularly given the growing demand for AI services. Our datacenters depend on the availability of permitted and buildable land, predictable energy, networking supplies, and servers, including graphics processing units and other components. Our devices are primarily manufactured by third-party contract manufacturers. For the majority of our products, we have the ability to use other manufacturers if a current vendor becomes unavailable or unable to meet our requirements. However, some of our products contain certain components for which there are very few qualified suppliers. Extended or unforeseen disruptions, or limited availability of components from these suppliers could impact our ability to operate our datacenters and manufacture devices on time to meet"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our success is highly dependent on our ability to attract and retain qualified employees. We hire a mix of university and industry talent worldwide. We compete for talented individuals globally by offering an exceptional working environment, broad customer reach, scale in resources, the ability to grow one\u2019s career across many different products and businesses, and competitive compensation and benefits."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our international operations provide a significant portion of our total revenue and expenses. Many of these revenue and expenses are denominated in currencies other than the U.S. dollar. As a result, changes in foreign exchange rates may significantly affect revenue and expenses. Fluctuations in the U.S. dollar relative to certain foreign currencies increased reported revenue and did not have a material impact on reported expenses from our international operations in fiscal year 2026."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Further, global, regional, and local economic developments and changes in global trade policies such as restrictions on international trade, including tariffs and other controls on imports or exports, could result in increased supply chain challenges, cost volatility, and consumer and economic uncertainty which may adversely affect our results of operations."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We use metrics in assessing the performance of our business and to make informed decisions regarding the allocation of resources. We disclose metrics to enable investors to evaluate progress against our ambitions, provide transparency into performance trends, and reflect the continued evolution of our products and services. Our commercial and other business metrics are fundamentally connected based on how customers use our products and services. The metrics are disclosed in the MD&A or the Notes to Financial Statements (Part II, Item 8 of this Form 10-K). Financial metrics are calculated based on financial results prepared in accordance with accounting principles generally accepted in the United States of America (\u201cGAAP\u201d), and growth comparisons relate to the corresponding period of last fiscal year."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our commercial business primarily consists of Server products and cloud services, Microsoft 365 Commercial products and cloud services, the commercial portion of LinkedIn, Dynamics products and cloud services, and Enterprise and partner services. Our commercial metrics allow management and investors to assess the overall health of our commercial business and include leading indicators of future performance."
+        }
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "cik": "0001045810",
+      "company": "NVIDIA Corporation",
+      "form": "10-K",
+      "accession_number": "0001045810-26-000021",
+      "filing_date": "2026-02-25",
+      "report_date": "2026-01-25",
+      "year": "2026",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "chunks": [
+        {
+          "section": "Item 1. Business",
+          "text": "Our technology stack includes the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs, as well as hundreds of domain-specific software libraries, frameworks, algorithms, software development kits, or SDKs, and application programming interfaces, or APIs. This deep and broad software stack accelerates the performance and facilitates the deployment of NVIDIA accelerated computing for computationally intensive workloads such as artificial intelligence, or AI, model training and inference, data analytics, scientific computing, robotics, and 3D graphics, with vertical-specific optimizations to address industries ranging from healthcare and telecom to automotive and manufacturing."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Introduced with the Blackwell architecture, our data-center-scale offerings feature extreme co-design where the infrastructure\u2019s chips, networking, systems, software, and algorithms are holistically architected and optimized to maximize performance and scale. Hundreds of thousands of GPUs can be interconnected to function as a single giant computer. This type of data center architecture and scale is needed for the development and deployment of modern AI and accelerated computing applications."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The GPU was initially used to simulate human imagination, enabling the virtual worlds of video games and films. Today, it also simulates human intelligence, enabling a deeper understanding of language, science, and the physical world. Its parallel processing capabilities, supported by tens of thousands of computing cores, are essential for deep learning algorithms. This form of AI, in which software writes itself by learning from large amounts of data, can serve as the brain of computers, robots, and self-driving cars that can perceive, understand and reason about the world. GPU-powered AI solutions are being developed by thousands of enterprises to deliver services and products that would have been immensely difficult or even impossible with traditional coding. Examples include generative AI, which can create new content such as text, code, images, audio, video, molecule structures, and recommendation systems; and agentic AI where systems of AI models work in concert to automatically complete a task."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "NVIDIA has a platform strategy, bringing together hardware, systems, software, algorithms, libraries, AI models and training data sets, and services to create unique value for the markets we serve. While the computing requirements of these end markets are diverse, we address them with a unified underlying programmable architecture allowing us to support several multi-billion-dollar end markets with the same underlying technology by using a variety of software stacks developed either internally or by third-party developers and partners. The large and growing number of developers and installed base across our platforms strengthens our ecosystem and increases the value of our platform for our customers."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Innovation is at our core. We have invested over $76.7 billion in research and development since our inception, yielding inventions that are essential to modern computing. Our invention of the GPU in 1999 sparked the growth of the PC gaming market and redefined computer graphics. With our introduction of CUDA in 2006, we opened the parallel processing capabilities of our GPU to a broad range of compute-intensive applications, paving the way for the emergence of modern AI. In 2012, the AlexNet neural network, trained on NVIDIA GPUs, won the ImageNet computer image recognition competition, marking the \u201cBig Bang\u201d moment of AI. We introduced our first Tensor Core GPU in 2017, built from the ground-up for the new era of AI, and our first autonomous driving system-on-chips, or SoC, in 2018. Our acquisition of Mellanox in 2020 expanded our offerings to include networking, enabled our platforms to be data center scale, and led to the introduction of a new processor class \u2013 the data processing unit, or DPU. Over the past 5 years, we have built full software stacks that run on top of our GPUs"
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our data center-scale infrastructure and computing platforms to accelerate the services and offerings they deliver to billions of end users and customers, including AI solutions and assistants, AI foundation models, advertising, search, recommendation systems, social"
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Enterprises and startups across a broad range of industries use our accelerated computing platforms to build new generative and agentic AI-enabled products and services, and/or to dramatically accelerate and reduce the costs of their workloads and workflows. The enterprise software industry uses them for new AI assistants, chatbots, and agents; the transportation industry for autonomous driving; the healthcare industry for accelerated and computer-aided drug discovery; and the financial services industry for customer support and fraud detection."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Researchers and developers use our computing solutions to accelerate a wide range of important applications, from simulating molecular dynamics to climate forecasting. With support for 6,000 applications, NVIDIA computing enables some of the most promising areas of discovery, from climate prediction to materials science and from wind tunnel simulation to genomics. Including GPUs and networking, NVIDIA powers over 78% of the supercomputers on the global TOP500 list, including 9 of the top 10 systems on the Green500 list."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Gamers choose NVIDIA GPUs to enjoy immersive, increasingly cinematic virtual worlds. In addition to serving the growing number of gamers, the market for PC GPUs is expanding because of the growing population of live streamers, broadcasters, artists, and creators. With the advent of generative and agentic AI, we expect a broader set of PC users to choose NVIDIA GPUs for running these applications locally on their PC, which is critical for privacy, latency, and cost-sensitive AI applications."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Professional artists, architects and designers use NVIDIA partner products accelerated with our GPUs and software platform for a range of creative, engineering, and design use cases, such as creating visual effects in movies or designing buildings and products. In addition, generative and agentic AI is expanding the market for our workstation-class GPUs, as more enterprise customers develop and deploy AI applications with their data on-premises."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We specialize in markets where our computing and AI infrastructure platforms can provide tremendous acceleration for applications. These platforms incorporate processors, interconnects, software, algorithms, systems, and services to deliver unique value. Our platforms address four large markets where our expertise is critical: Data Center, Gaming, Professional Visualization, and Automotive."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The NVIDIA Data Center platform is focused on accelerating compute-intensive workloads, such as AI, data processing, graphics, robotics, and scientific computing, delivering superior total cost of ownership relative to conventional CPU-only approaches. It is deployed in cloud, hyperscale, on-premises and edge data centers. The platform consists of data center compute and networking infrastructure offerings typically delivered to customers as rack-scale systems, subsystems, or modules, along with software and services."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "The following risk factors should be considered in addition to the other information in this Annual Report on Form 10-K. The following risks could harm our business, financial condition, results of operations or reputation, which could cause our stock price to decline. Additional risks, trends and uncertainties not presently known to us or that we currently believe are immaterial may also harm our business, financial condition, results of operations or reputation."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "\u2022A significant amount of our revenue stems from a limited number of partners and distributors and we have a concentration of sales to customers who purchase directly or indirectly from us, and our revenue could be adversely affected if we lose or are prevented from selling to any of these customers."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "\u2022timely identify industry changes, adapt our strategies, and develop new or enhance and maintain existing products and technologies that meet the evolving needs of our markets, including addressing unexpected shifts in industry standards or disruptive technological innovations that could render our products incompatible with those developed by other companies;"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We have invested in research and development in markets where we have a limited operating history, which may not produce meaningful revenue for several years, if at all. If we fail to develop or monetize new products and technologies, or if they do not become widely adopted, our financial results could be adversely affected. Obtaining design wins may involve a lengthy process and depends on our ability to anticipate and provide features and functionality that customers will demand. They also do not guarantee revenue. Failure to obtain a design win may prevent us from obtaining future design wins in subsequent generations. We cannot ensure that our products and technologies will provide value to our customers and partners. If we fail any of these key success criteria, our financial results may be harmed."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We have entered into an intellectual property license arrangement with Groq, Inc., or Groq, that required significant, nonrefundable payments. Successfully incorporating the licensed technology into our architectures and product roadmaps requires significant engineering effort and may not occur on expected timelines or at all. The licensed technology may not achieve the desired results as designed or achieve customer or ecosystem adoption. The economic outcomes of this arrangement depend on our ability to translate the licensed technology into commercially viable products and services over time, and we may be unable to recover the associated costs or realize an adequate return on this spend. If our efforts to use the licensed technology are delayed or unsuccessful, our business, operating results, and financial condition could be negatively impacted."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We entered into multi-year cloud service agreements to support our research and development activities. The timing and availability of these cloud services have changed and may continue to shift, impacting our revenue, expenses, and development timelines, and these arrangements may not deliver anticipated benefits. We also offer or plan to offer standalone software solutions, including NVIDIA AI Enterprise, NVIDIA Omniverse, NVIDIA DRIVE, and other software products. These business models or strategies may not be successful, and we may fail to sell any meaningful standalone software or services. We may incur significant costs and may not achieve any significant revenue from these offerings."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Our target markets remain competitive, and competition may intensify with expanding and changing product and service offerings, industry standards, customer and market needs, new entrants and consolidations. Our competitors\u2019 products, services and technologies, including those mentioned above in this Annual Report on Form 10-K, may be cheaper or provide better functionality or features than ours, which has resulted and may in the future result in lower-than-expected selling prices or demand for our products. Some of our competitors operate their own fabrication facilities, and have longer operating histories, larger customer bases, more comprehensive IP portfolios and patent protections, more design wins, and greater financial, sales, marketing and distribution resources than we do. These competitors may be able to acquire market share and/or prevent us from doing so, more effectively identify and capitalize upon opportunities in new markets and end-user trends, more quickly transition their products, and impinge on our ability to procure sufficient"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "foundry capacity and scarce input materials during a supply-constrained environment, which could harm our business. Some of our customers have in-house expertise and internal development capabilities similar to some of ours and can use or develop their own solutions to replace those we are providing. For example, others may offer cloud-based services that compete with our AI cloud service offerings, and we may not be able to establish market share sufficient to achieve the scale necessary to meet our business objectives. If we are unable to successfully compete in this environment, demand for our products, services and technologies could decrease, which may negatively impact our business."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We have long manufacturing lead times and build finished products and maintain inventory in advance of anticipated demand. In periods of shortages impacting the semiconductor industry and/or limited supply or capacity in our supply chain, the lead times for certain supply may be extended. We have previously experienced and may continue to experience extended lead times of more than 12 months. To secure future supply and capacity, we have paid premiums, provided deposits, and entered into long-term supply agreements and capacity commitments, which have increased our product costs and this may continue. We may still be unable to secure sufficient commitments for capacity to address our business needs."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "If we inaccurately estimate demand, or our customers change orders, as we have experienced in the past, we may not be able to reduce our supply commitments in time, at the same rate, or at all. Significant mismatches between supply and demand have varied across our market platforms, resulted in both product shortages and excess inventory, significantly harmed our financial results and could reoccur. If we underestimate demand, and our foundry partners and contract manufacturers are unable to increase production or provide sufficient supply, we may not be able to meet increased customer demand in a timely manner, or at all. Our reputation and customer relationships could be damaged and we could lose revenue and market share. Additionally, since some of our products are part of a complex data center buildout, supply constraints or availability issues with respect to any one component have had and may have a broader revenue impact. For example, our ability to sell certain products has been and could be impeded if components necessary for the finished products are not available from"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "If we overestimate demand, or if customers cancel or defer orders or choose to purchase from our competitors, we may not be able to utilize on-hand inventory or reduce purchase commitments accordingly. We have had to reduce average selling prices, including due to our channel pricing programs, increase prices for certain of our products as a result of our suppliers\u2019 increase in prices, write down our inventory, incur cancellation penalties, and record impairments, and may have to do so in the future. The impact of these risks would be amplified by our non-cancellable and non-returnable purchase orders placed in advance of our historical lead times and could be exacerbated if we need to make changes to the design of future products. These risks have increased and may continue to increase as our purchase obligations and prepaids have grown and are expected to continue to grow and become a greater portion of our total supply. All of these factors may negatively impact our gross margins and financial results."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "The availability of data centers, energy, and capital to support the buildout of NVIDIA AI infrastructure by our customers and partners is crucial, and any shortage of these and other necessary resources could impact our future revenue and financial performance. Expanding energy capacity to meet demand is a complex, multi-year process involving significant regulatory, technical, and construction challenges. In addition, access to capital can be particularly constrained for less-capitalized companies, which may face difficulties securing financing for large-scale infrastructure projects. These limitations could delay customer and partner deployments or reduce the scale of accelerated computing and AI adoption."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The following discussion and analysis of our financial condition and results of operations should be read in conjunction with \u201cItem 1A. Risk Factors,\u201d our Consolidated Financial Statements and related Notes thereto, as well as other cautionary statements and risks described elsewhere in this Annual Report on Form 10-K, before deciding to purchase, hold, or sell shares of our common stock."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. Since our original focus on PC graphics, we have expanded to several other large and important computationally intensive fields. Fueled by the sustained demand for exceptional 3D graphics and the scale of the gaming market, NVIDIA has leveraged its GPU architecture to create platforms for scientific computing, AI, data science, autonomous vehicles, robotics, and digital twin applications. NVIDIA is now a data center scale AI infrastructure company reshaping all industries."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The availability of data centers, energy, and capital to support the buildout of NVIDIA AI infrastructure by our customers and partners is crucial, and any shortage of these or other necessary resources could impact our future revenue and financial performance. Expanding energy capacity to meet demand is a complex, multi-year process that involves significant regulatory, technical, and construction challenges. In addition, access to capital can be particularly constrained for less-capitalized companies, which may face difficulties securing financing for large-scale infrastructure projects. These limitations could delay customer and partner deployments or reduce the scale of accelerated computing and AI adoption."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We continue to execute Data Center compute product introductions, bringing new advanced architectures on a one-year product cadence, including our Rubin platform. We began shipping production units of our new Blackwell Ultra platforms including GB300 in the second quarter of fiscal year 2026. The complexity of our product transitions and sophisticated system configurations has and may in the future cause delays in production and create challenges in managing supply and demand. This could further result in revenue volatility, quality issues, increased inventory provisions, decreases in product yields and higher material costs, and/or increased warranty costs. Customers may postpone purchasing new architectures or may adopt new technologies more gradually than anticipated, affecting our revenue timing and supply chain expenses."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "In April 2025, the USG informed us that a license is required for exports of our H20 product into the China market. As a result of these requirements, we incurred a $4.5 billion charge in the first quarter of fiscal year 2026 associated with H20 for excess inventory and purchase obligations, as the demand for H20 diminished. In August 2025, the USG granted licenses that would allow us to ship certain H20 products to certain China-based customers. We generated approximately $60 million in H20 revenue under those licenses."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "While currently our supply chain is mainly concentrated in Asia, we are expanding into the U.S. and Latin America. These moves are expected to strengthen our supply chain, add resiliency and redundancy, and meet the growing demand for AI infrastructure. Our ability to increase manufacturing capabilities will depend on the local region's manufacturing ecosystem's capacity to ramp production supply to the required volume and on a timely basis."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "\u2022We invested $17.5 billion in private companies and infrastructure funds, primarily to support early\u2011stage startups. These investments include AI model makers that purchase our products directly or through CSPs. Many of these investments are illiquid and non\u2011marketable. The related early-stage startups may not become profitable in the near term, or at all, and there can be no assurance that we will realize a return on our investments."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "\u2022To support the build-out of complex datacenter infrastructures, we enter into commercial arrangements, including guarantees with partners. We provided $3.5 billion in land, power, and shell guarantees to early\u2011stage companies, generally over multi\u2011year periods. If the escrow and the partners' operating activities are not sufficient to cover an event of default under these guarantees, we may elect to assume the underlying leases for internal use or sublease them to third parties."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Macroeconomic factors, including tariffs, inflation, interest rate changes, capital market volatility, global supply chain constraints, and global economic and geopolitical developments, have direct and indirect impacts on our results of operations, particularly demand for our products. While difficult to isolate and quantify, these macroeconomic factors impact our supply chain and manufacturing costs, employee wages, costs for capital equipment, the value of our investments, revenue and competitive position. Our product and solution pricing generally does not fluctuate with short-term changes in our costs. Within our supply chain, we continuously manage product availability and costs with our vendors."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our consolidated financial statements are prepared in accordance with accounting principles generally accepted in the United States, or U.S. GAAP. The preparation of these financial statements requires us to make estimates and judgments that affect the reported amounts of assets, liabilities, revenue, cost of revenue, expenses and related disclosure of contingencies. Critical accounting estimates are those estimates that involve a significant level of estimation uncertainty and could have a material impact on our financial condition or results of operations. We have critical accounting estimates in the areas of inventories, income taxes, non-marketable equity securities, and revenue recognition. Refer to Note 1 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for a summary of significant accounting policies."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We charge cost of sales for inventory provisions to write-down our inventory to the lower of cost or net realizable value or for obsolete or excess inventory, and for excess product purchase commitments. Most of our inventory provisions relate to excess quantities of products or components, based on our inventory levels and future product purchase commitments compared to assumptions about future demand and market conditions, which requires management judgment."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Situations that may result in excess or obsolete inventory or excess product purchase commitments include changes in business and economic conditions, changes in market conditions, sudden and significant decreases in demand for our products, including potential cancellation or deferral of customer purchase orders, inventory obsolescence because of changing technology and customer requirements, new product introductions resulting in less demand for existing products or inconsistent spikes in demand, failure to estimate customer demand properly, ordering in advance of historical lead-times, government regulations and the impact of changes in future demand, or increase in demand for competitive products, including competitive actions."
+        }
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "cik": "0001018724",
+      "company": "Amazon.com, Inc.",
+      "form": "10-K",
+      "accession_number": "0001018724-26-000004",
+      "filing_date": "2026-02-06",
+      "report_date": "2025-12-31",
+      "year": "2025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "chunks": [
+        {
+          "section": "Item 1. Business",
+          "text": "This Annual Report on Form 10-K and the documents incorporated herein by reference contain forward-looking statements based on expectations, estimates, and projections as of the date of this filing. Actual results and outcomes may differ materially from those expressed in forward-looking statements. See Item 1A of Part I \u2014 \u201cRisk Factors.\u201d As used herein, \u201cAmazon.com,\u201d \u201cwe,\u201d \u201cour,\u201d and similar terms include Amazon.com, Inc. and its subsidiaries, unless the context indicates otherwise."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We seek to be Earth\u2019s most customer-centric company. We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking. In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We have organized our operations into three segments: North America, International, and Amazon Web Services (\u201cAWS\u201d). These segments reflect the way the Company evaluates its business performance and manages its operations. Information on our net sales is contained in Item 8 of Part II, \u201cFinancial Statements and Supplementary Data \u2014 Note 10 \u2014 Segment Information.\u201d"
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We serve consumers through our online and physical stores and focus on selection, price, and convenience. We design our stores to enable hundreds of millions of unique products to be sold by us and by third parties across dozens of product categories. Customers access our offerings through our websites, mobile apps, Alexa, devices, streaming, and physically visiting our stores. We also manufacture and sell electronic devices, including Kindle, Fire tablet, Fire TV, Echo, Ring, Blink, and eero, and we develop and produce media content. We seek to offer our customers low prices, fast and free delivery, easy-to-use functionality, and timely customer service. In addition, we offer subscription services such as Amazon Prime, a membership program that includes fast, free shipping on tens of millions of items, access to award-winning movies and series, live sports, and other benefits."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We fulfill customer orders in a number of ways, including through: North America and International fulfillment networks that we operate; co-sourced and outsourced arrangements in certain countries; digital delivery; and through our physical stores. We operate customer service centers globally, which are supplemented by co-sourced arrangements. See Item 2 of Part I, \u201cProperties.\u201d"
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We offer programs that enable sellers to grow their businesses, sell their products in our stores, and fulfill orders using our services. We are not the seller of record in these transactions. We earn fixed fees, a percentage of sales, per-unit activity fees, interest, or some combination thereof, for our seller programs."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Our businesses encompass a large variety of product types, service offerings, and delivery channels. The worldwide marketplace in which we compete is evolving rapidly and intensely competitive, and we face a broad array of competitors from many different industry sectors around the world. Our current and potential competitors include: (1) physical, e-commerce, and omnichannel retailers, publishers, vendors, distributors, manufacturers, and producers of the products we offer and sell to consumers and businesses; (2) publishers, producers, and distributors of physical, digital, and interactive media of all types and all distribution channels; (3) web search engines, comparison shopping websites, social networks, web portals, virtual assistants, and other online and app-based means of discovering, using, or acquiring goods and services, either directly or in collaboration with other retailers, including through artificial intelligence; (4) companies that provide e-commerce services, including website development and hosting, omnichannel sales, inventory and supply chain management,"
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We regard our trademarks, service marks, copyrights, patents, domain names, trade dress, trade secrets, proprietary technologies, and similar intellectual property as critical to our success, and we rely on trademark, copyright, and patent law, trade-secret protection, and confidentiality and/or license agreements with our employees, customers, partners, and others to protect our proprietary rights. We have registered, or applied for the registration of, a number of U.S. and international domain names, trademarks, service marks, and copyrights. Additionally, we have filed U.S. and international patent applications covering certain of our proprietary technology."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Our employees are critical to our mission of being Earth\u2019s most customer-centric company. As of December 31, 2025, we employed approximately 1,576,000 full-time and part-time employees. Additionally, we use independent contractors and temporary personnel to supplement our workforce. Competition for qualified personnel is intense, particularly for software engineers, computer scientists, and other technical staff (including for artificial intelligence and machine learning technologies), and constrained labor markets have increased competition for personnel across other parts of our business."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We strive to be Earth\u2019s best employer. We rely on numerous and evolving initiatives to implement this objective and invent mechanisms for talent development, including competitive pay and benefits, flexible work arrangements, and skills training and educational programs such as Amazon Career Choice (education funding for eligible employees). Over 300,000 Amazon employees around the world have participated in Career Choice. We also continue to inspect and refine the mechanisms we use to hire, develop, evaluate, and retain our employees. In addition, safety is integral to everything we do at Amazon and we continue to invest in safety improvements such as capital improvements, new safety technology, vehicle safety controls, and engineering ergonomic solutions. Our safety team is dedicated to using the science of safety to solve complex problems and establish new industry best practices. We also provide mentorship and support resources to our employees, and have deployed numerous programs that advance employee engagement, communication, and feedback."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Our investor relations website is amazon.com/ir and we encourage investors to use it as a way of easily finding information about us. We promptly make available on this website, free of charge, the reports that we file or furnish with the Securities and Exchange Commission (\u201cSEC\u201d), corporate governance information (including our Code of Business Conduct and Ethics), and select press releases."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Jeffrey P. Bezos. Mr. Bezos founded Amazon.com in 1994 and has served as Executive Chair since July 2021. He has served as Chair of the Board since 1994 and served as Chief Executive Officer from May 1996 until July 2021, and as President from 1994 until June 1999 and again from October 2000 to July 2021."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Please carefully consider the following discussion of significant factors, events, and uncertainties that make an investment in our securities risky. The events and consequences discussed in these risk factors could, in circumstances we may or may not be able to accurately predict, recognize, or control, have a material adverse effect on our business, growth, reputation, prospects, financial condition, operating results (including components of our financial results), cash flows, liquidity, and stock price. These risk factors do not identify all risks that we face; our operations could also be affected by factors, events, or uncertainties that are not presently known to us or that we currently do not consider to present significant risks to our operations. In addition to the factors discussed in Item 7 of Part II, \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations,\u201d and in the risk factors below, global economic and geopolitical conditions and additional or unforeseen circumstances, developments, or events may give rise to or amplify many of the"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Our businesses are rapidly evolving and intensely competitive, and we have many competitors across geographies, including cross-border competition, and in different industries, including physical, e-commerce, and omnichannel retail, e-commerce services, web and infrastructure computing services, electronic devices, digital content, advertising, grocery, healthcare, communications, and transportation and logistics services. Some of our current and potential competitors have greater resources, longer histories, more customers, and/or greater brand recognition, particularly with our newly-launched products and services and in our newer geographic regions. They may secure better terms from vendors, adopt more aggressive pricing, and devote more resources to technology, infrastructure, fulfillment, and marketing."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Competition continues to intensify, including with the development of new business models and the entry of new and well-funded competitors, and as our competitors enter into business combinations or alliances and established companies in other market segments expand to become competitive with our business. In addition, new and enhanced technologies, including search, web and infrastructure computing services, practical applications of artificial intelligence and machine learning, digital content, satellites, and electronic devices continue to increase our competition. The internet and other technologies including artificial intelligence facilitate competitive entry and comparison shopping, which enhances the ability of new, smaller, or lesser-known businesses to compete against us. As a result of competition, our product and service offerings may not be successful, we may fail to gain or may lose business, and we may be required to increase our spending or lower prices, any of which could materially reduce our sales and profits."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We may have limited or no experience in our newer market segments, and our customers may not adopt our product or service offerings. These offerings, which can present new and difficult technology challenges, may subject us to claims if customers of these offerings experience, or are otherwise impacted by, service disruptions, delays, setbacks, or failures or"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "quality issues. In addition, profitability or other intended benefits, if any, in our newer activities (including development and adoption of automation, artificial intelligence, and machine learning technologies for customer and internal use), may not meet our expectations, and we may not be successful enough in these newer activities to recoup our investments in them, which investments are often significant. Failure to realize the benefits of amounts we invest in new technologies, products, or services could result in the value of those investments being written down or written off. In addition, our sustainability initiatives may be unsuccessful for a variety of reasons, including if we are unable to realize the expected benefits of new technologies or if we do not successfully plan or execute new strategies, which could harm our business or damage our reputation."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Our international activities are significant to our revenues and profits, and we plan to further expand internationally. In certain international market segments, we have relatively little operating experience and may not benefit from any first-to-market advantages or otherwise succeed. It is costly to establish, develop, and maintain international operations and stores, and promote our brand internationally. Our international operations may not become profitable on a sustained basis."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "\u2022government regulation (such as regulation of our product and service offerings and of competition); restrictive governmental actions (such as trade protection or retaliatory measures, including export duties and quotas and custom duties and tariffs, and restrictions around the import and export of certain products, technologies, and components); nationalization; and restrictions on foreign ownership;"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "\u2022restrictions on sales or distribution of certain products or services and uncertainty regarding liability for products, services, and content, including uncertainty as a result of less internet-friendly legal systems, local laws, lack of legal precedent, and varying rules, regulations, and practices regarding the physical and digital distribution of media products and enforcement of intellectual property rights;"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "As international physical, e-commerce, and omnichannel retail, cloud services, and other services grow, competition will intensify, including through adoption of evolving business models. Local companies may have a substantial competitive advantage because of their greater understanding of, and focus on, the local customer, as well as their more established local brand names. The inability to hire, train, retain, and manage sufficient required personnel may limit our international growth."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "The People\u2019s Republic of China (\u201cPRC\u201d) and India regulate Amazon\u2019s and its affiliates\u2019 businesses and operations in country through regulations and license requirements that may restrict (i) foreign investment in and operation of the internet, IT infrastructure, data centers, retail, delivery, and other sectors, (ii) internet content, and (iii) the sale of media and other products and services. For example, in order to meet local ownership, regulatory licensing, and cybersecurity requirements, we provide"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "certain technology services in China through contractual relationships with third parties that hold PRC licenses to provide services. In India, the government restricts the ownership or control of Indian companies by foreign entities involved in online multi-brand retail trading activities. For www.amazon.in, we provide certain marketing tools and logistics services to third-party sellers to enable them to sell online and deliver to customers, and we hold an indirect minority interest in an entity that is a third-party seller on the www.amazon.in marketplace. Although we believe these structures and activities comply with existing laws, they involve unique risks, and the PRC and India may from time to time consider and implement additional changes in their regulatory, licensing, or other requirements that could impact these structures and activities. There are substantial uncertainties regarding the interpretation of PRC and Indian laws and regulations, and it is possible that these governments will ultimately take a view contrary to ours. In addition, our Chinese and Indian"
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "In addition, because China-based sellers account for significant portions of our third-party seller services and advertising revenues, and China-based suppliers provide significant portions of our components and finished goods, regulatory and trade restrictions, tariff policy changes and trade disputes, data protection and cybersecurity laws, economic factors, geopolitical events, security issues, or other factors negatively impacting China-based sellers and suppliers could adversely affect our operating results."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "This Annual Report on Form 10-K includes forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. All statements other than statements of historical fact, including statements regarding guidance, industry prospects, or future results of operations or financial position, made in this Annual Report on Form 10-K are forward-looking. We use words such as anticipates, believes, expects, future, intends, and similar expressions to identify forward-looking statements. Forward-looking statements reflect management\u2019s current expectations and are inherently uncertain. Actual results and outcomes could differ materially for a variety of reasons, including, among others, fluctuations in foreign exchange rates and energy prices, changes in global economic conditions, tariff and trade policies, resource and supply volatility, including for memory chips, and customer demand and spending, inflation, interest rates, regional labor market constraints, world events, the rate of growth of the internet, online commerce, cloud services, and new and emerging"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our primary source of revenue is the sale of a wide range of products and services to customers. The products offered through our stores include merchandise and content we have purchased for resale and products offered by third-party sellers, and we also manufacture and sell electronic devices and produce media content. Generally, we recognize gross revenue from items we sell from our inventory as product sales and recognize our net share of revenue of items sold by third-party sellers as service sales. We seek to increase unit sales across our stores, through increased product selection, across numerous product categories. We also offer other services such as compute, storage, and database offerings, fulfillment, advertising, publishing, and digital content subscriptions."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our financial focus is on long-term, sustainable growth in free cash flow. Free cash flow is driven primarily by increasing operating income and efficiently managing accounts receivable, inventory, accounts payable, and cash capital expenditures, including our decision to purchase or lease property and equipment. Increases in operating income primarily result from increases in sales of products and services and efficiently managing our operating costs, partially offset by investments we make in longer-term strategic initiatives, including capital expenditures focused on improving the customer experience. To increase sales of products and services, we focus on improving all aspects of the customer experience, including lowering prices, improving availability, offering faster delivery and performance times, increasing selection, producing original content, increasing product categories and service offerings, expanding product information, improving ease of use, improving reliability, and earning customer trust. See \u201cResults of Operations \u2014 Non-GAAP Financial Measures\u201d below for"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We seek to reduce our variable costs per unit and work to leverage our fixed costs. Our variable costs include product and content costs, payment processing and related transaction costs, picking, packaging, and preparing orders for shipment, transportation, customer service support, costs necessary to run AWS, and a portion of our marketing costs. Our fixed costs include the costs necessary to build and run our technology infrastructure; to build, enhance, and add features to our online stores, web services, electronic devices, and digital offerings; and to build and optimize our fulfillment network. Variable costs generally change directly with sales volume, while fixed costs generally are dependent on the timing of capacity needs, geographic expansion, category expansion, and other factors. To decrease our variable costs on a per unit basis and enable us to lower prices for customers, we seek to increase our direct sourcing, increase discounts from suppliers, and reduce defects in our processes. To minimize unnecessary growth in fixed costs, we seek to improve process"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We seek to turn inventory quickly and collect from consumers before our payments to vendors and sellers become due. Because consumers primarily use credit cards in our stores, our receivables from consumers settle quickly. We expect variability in inventory turnover over time since it is affected by numerous factors, including our product mix, the mix of sales by us and by third-party sellers, our continuing focus on in-stock inventory availability and selection of product offerings, supply chain disruptions and resulting vendor lead times, our investment in new geographies and product lines, and the extent to which we choose to utilize third-party fulfillment providers. We also expect some variability in accounts payable days over"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "time since they are affected by several factors, including the mix of product sales, the mix of sales by third-party sellers, the mix of suppliers, seasonality, and changes in payment and other terms over time, including the effect of balancing pricing and timing of payment terms with suppliers."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We expect spending in technology and infrastructure will increase over time, which can negatively impact short-term free cash flow, as we add infrastructure and employees, including to support our artificial intelligence and machine learning initiatives, to support long-term growth. Our technology and infrastructure investment and capital spending projects often support a variety of product and service offerings due to geographic expansion and the cross-functionality of our systems and operations. We seek to invest efficiently in several areas of technology and infrastructure, including AWS, and expansion of new and existing product categories and service offerings, as well as in infrastructure to enhance the customer experience and improve our process efficiencies. We believe that advances in technology, specifically the speed and reduced cost of processing power, data storage and analytics, improved wireless connectivity, and the practical applications of artificial intelligence and machine learning, will continue to improve users\u2019 experience on the internet and increase its"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We seek to efficiently manage shareholder dilution while maintaining the flexibility to issue shares for strategic purposes, such as financings, acquisitions, and aligning employee compensation with shareholders\u2019 interests. We utilize restricted stock units as our primary vehicle for equity compensation because we believe this compensation model aligns the long-term interests of our shareholders and employees. In measuring shareholder dilution, we include all vested and unvested stock awards outstanding, without regard to estimated forfeitures. Total shares outstanding plus outstanding stock awards were 10.9 billion and 11.0 billion as of December 31, 2024 and 2025."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our financial reporting currency is the U.S. Dollar and changes in foreign exchange rates significantly affect our reported results and consolidated trends. For example, if the U.S. Dollar weakens year-over-year relative to currencies in our international locations, our consolidated net sales and operating expenses will be higher than if currencies had remained constant. Likewise, if the U.S. Dollar strengthens year-over-year relative to currencies in our international locations, our consolidated net sales and operating expenses will be lower than if currencies had remained constant. We believe that our increasing diversification beyond the U.S. economy through our growing international businesses benefits our shareholders over the long-term. We also believe it is useful to evaluate our operating results and growth rates before and after the effect of currency changes."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "In addition, the remeasurement of our intercompany balances can result in significant gains and losses associated with the effect of movements in foreign exchange rates. Currency volatilities may continue, which may significantly impact (either positively or negatively) our reported results and consolidated trends and comparisons."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Our Annual Report on Form 10-K for the year ended December 31, 2024 includes a discussion and analysis of our financial condition and results of operations for the year ended December 31, 2023 in Item 7 of Part II, \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations.\u201d"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "The preparation of financial statements in conformity with generally accepted accounting principles of the United States (\u201cGAAP\u201d) requires estimates and assumptions that affect the reported amounts of assets and liabilities, revenues and expenses, and related disclosures of contingent liabilities in the consolidated financial statements and accompanying notes. Critical accounting estimates are those estimates made in accordance with GAAP that involve a significant level of estimation uncertainty and have had or are reasonably likely to have a material impact on the financial condition or results of operations of the Company. Based on this definition, we have identified the critical accounting estimates addressed below. We also have other key accounting policies, which involve the use of estimates, judgments, and assumptions that are significant to understanding our results. For additional information, see Item 8 of Part II, \u201cFinancial Statements and Supplementary Data \u2014 Note 1 \u2014 Description of Business, Accounting Policies, and Supplemental Disclosures.\u201d Although we believe that our"
+        }
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "cik": "0001652044",
+      "company": "Alphabet Inc.",
+      "form": "10-K",
+      "accession_number": "0001652044-26-000018",
+      "filing_date": "2026-02-05",
+      "report_date": "2025-12-31",
+      "year": "2025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "chunks": [
+        {
+          "section": "Item 1. Business",
+          "text": "As our founders Larry and Sergey wrote in the original founders' letter, \"Google is not a conventional company. We do not intend to become one.\" That unconventional spirit has been a driving force throughout our history, inspiring us to tackle big problems and invest in moonshots. It led us to be a pioneer in the development of artificial intelligence (AI) and, since 2016, be an AI-first company. We continue this work under the leadership of Alphabet and Google CEO, Sundar Pichai."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Alphabet is a collection of businesses \u2014 the largest of which is Google. We report Google in two segments, Google Services and Google Cloud, and all non-Google businesses collectively as Other Bets. Supporting these businesses, we have centralized certain AI-related research and development focused on advanced research in AI and developing the frontier models that serve our businesses, which is reported in Alphabet-level activities. Alphabet's structure is about helping each of our businesses prosper through strong leaders and independence."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "The Internet is one of the world\u2019s most powerful equalizers; it propels ideas, people, and businesses large and small. Our mission to organize the world\u2019s information and make it universally accessible and useful is as relevant today as it was when we were founded in 1998. Since then, we have evolved from a company that helps people find answers to a company that also helps people get things done."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We are focused on building an even more helpful Google for everyone, and we aspire to give everyone the tools they need to increase their knowledge, health, happiness, and success. Google Search helps people find information and make sense of the world in more natural and intuitive ways, with trillions of searches on Google every year. YouTube provides people with entertainment, information, and opportunities to learn something new and helps support the creator economy through the YouTube Partner Program. Google Cloud helps customers build for the future, improve productivity, reduce costs, and unlock new growth engines. We continually innovate and build new products and features to help our users, partners, customers, and communities and have invested more than $200 billion in research and development in the last five years in support of these efforts."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We believe AI is a profound platform shift that can bring meaningful and positive change to people and societies across the world, and to our business. We aim to build the most advanced, safe, and responsible AI through our full-stack approach, which spans AI-optimized infrastructure; world-class research, including models and tooling; and our products and platforms that bring AI to billions of people, developers, and enterprises."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "At the foundation of our full-stack approach is our AI-optimized infrastructure \u2014 a key differentiator enabling us to power our own products, such as Search and YouTube, and support the services we provide to our Google Cloud customers. Our technical infrastructure allows us to use and offer our customers a range of AI accelerator options, including specialized Graphics Processing Units (GPUs) and our own custom-built Tensor Processing Units (TPUs), such as Ironwood, our seventh-generation TPU. We are focused on driving efficiencies in our data centers, allowing us to leverage our technical infrastructure to deliver our products and services at an increasing scale while simultaneously enabling world-class research and model development."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Over the last decade, our research teams have pushed the boundaries of AI forward, which is displayed through Gemini 3, our most intelligent AI model yet. Designed to deliver advanced multimodal understanding, Gemini 3 represents our most capable iteration of agentic and generative coding technologies. Gemini 3 integrates enhanced reasoning capabilities to support visualizations and interactive user experiences across our product ecosystem, including Search and the Gemini app."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "As technology continues to improve rapidly, we are focused on bringing our latest AI advances to our products and platforms. We continue to help our users access information and knowledge, express themselves, and get things done by embedding the power of generative AI and Gemini into our products and platforms. Today, all 15 of our half-billion-user products \u2014 including seven with two billion users \u2014 use our Gemini models. For our Google Cloud customers, our offerings are helping organizations stay at the forefront of innovation with solutions such as Gemini Enterprise and Gemini for Google Workspace."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Our early investments in AI started out as moonshots but are now incorporated into our core products and central to future developments. In Other Bets, our fully autonomous driving technology company, Waymo, is now providing fully autonomous, paid ride-hailing services to customers in multiple cities. Isomorphic Labs is reimagining the drug discovery process from first principles, applying AI to accelerate the development of new medicines. We continue to look toward the future and to invest for the long term, most notably for the application of AI to our products and services, as well as other frontier technologies such as quantum computing."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We make it a priority to protect the privacy and security of our products, users, and customers, even if there are near-term financial consequences. We do this by continuously investing in building products that are secure by default; strictly upholding responsible data practices that emphasize privacy by design; and building easy-to-use settings that put people in control. We are continually enhancing these efforts over time, whether by enabling users to auto-delete their data, applying privacy technologies like on-device processing, giving people tools to control their experience, or advancing anti-malware, anti-phishing, and password security features."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "We have always been committed to building helpful products that can improve the lives of millions of people worldwide. Our product innovations are what make our services widely used, and our brand one of the most recognized in the world. Google Services' core products and platforms include ads, Android, Chrome, devices, Gmail, Google Drive, Google Gemini, Google Maps, Google Photos, Google Play, Search, and YouTube, with broad and growing adoption by users around the world."
+        },
+        {
+          "section": "Item 1. Business",
+          "text": "Our products and services have come a long way since the company was founded more than 25 years ago. While Google Search started as a way to find web pages, organized into ten blue links, we have driven technical advancements and product innovations that have transformed Google Search into a dynamic, multimodal experience. Large language models have made it possible to express more natural language queries, vastly improving the types of questions users can ask, and the quality of results. For example, AI Overviews makes it easier to ask Google anything and get a helpful response. AI Mode allows users to ask more nuanced questions that might have previously taken multiple searches, using Gemini\u2019s advanced reasoning, thinking, and multimodal capabilities."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Our operations and financial results are subject to various risks and uncertainties, including but not limited to those described below, which could harm our business, reputation, financial condition, and operating results, and may affect the trading price and price volatility of our Class A and Class C stock."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We generate a significant portion of our revenues from advertising. Reduced spending by advertisers, a loss of partners, shifts in online advertising, new and evolving advertising formats, or new or existing technologies that block ads online or affect our ability to personalize ads could harm our business."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We generated more than 70% of total revenues from online advertising in 2025. Many of our advertisers, companies that distribute our products and services, digital publishers, and content providers can terminate their contracts with us at any time. These partners may not continue to do business with us if we do not create more value (such as increased numbers of users or customers, new sales leads, increased brand awareness, or more effective monetization) than their available alternatives."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We believe AI is quickly reshaping the advertising industry, including how ads are delivered online, and we and our competitors are constantly adjusting to meet this shift and provide new and evolving advertising formats. There is no assurance that we will adapt effectively and competitively to meet this shift, and that such advertising formats, strategies, and offerings will be successful."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Changes to our advertising policies and data privacy practices, as well as changes to other companies' advertising or data privacy practices have in the past, and may in the future, affect the advertising services that we are able to provide. In addition, technologies have been developed that make personalized ads more difficult, or that block the display of ads altogether, and some providers of online services have integrated technologies that could impair the availability and functionality of third-party digital advertising. Failing to provide superior value or deliver advertisements effectively and competitively could harm our business, reputation, financial condition, and operating results."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Expenditures by advertisers tend to correlate with overall economic conditions. Adverse macroeconomic conditions have affected, and may in the future affect, the demand for advertising, resulting in fluctuations in the amounts our advertisers spend on advertising, which could harm our financial condition and operating results."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We have invested and expect to expand our investment in new businesses, products, services, and technologies in a wide range of industries beyond online advertising. The investments that we are making across our businesses \u2014 such as building AI-optimized infrastructure, including our custom TPUs, and integrating AI capabilities into new and existing products and services \u2014 reflect our ongoing efforts to innovate and provide products and services that are helpful to users, advertisers, publishers, customers, content providers, and distribution partners. Our investments ultimately may not be commercially viable or may not result in an adequate return of capital and, in pursuing new strategies, we may incur unanticipated liabilities."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "To meet the compute capacity demands of AI training and inference, as well as traditional cloud computing services, we are entering into significant leasing arrangements with third party operators, which may increase costs and operational complexity. We also have a number of large, long-duration commercial agreements, which could increase our liabilities and obligations in the event of nonperformance by us, our counterparties, or vendors. In such nonperformance or an industry downturn, we may incur additional liabilities, have excess capacity that we cannot easily redeploy, and not receive payments from our counterparties or customers."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "We have invested and expect to significantly expand our investment in property and equipment, including our technical infrastructure, and we expect these assets to benefit our business over their estimated useful lives. Changes in facts and circumstances such as changes to historical asset performance, expected technology advancements, and future network deployment plans could change the period over which we expect to benefit from the asset and impact our financial condition and operating results."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Innovations in our products and services could also result in changes to user and customer behavior and affect our revenue trends. These endeavors involve significant risks and uncertainties, including diversion of resources and management attention from current operations, different monetization models, and the use of alternative investment, governance, or compensation structures that may fail to adequately align incentives across the company or otherwise accomplish their objectives."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Within Google Services, we continue to invest heavily in devices, including our smartphones, home devices, and wearables, which is a highly competitive market with frequent introduction of new products and services, rapid adoption of technological advancements by competitors, increased market saturation in developed countries, short product life cycles, evolving industry standards, continual improvement in performance characteristics, and price and feature sensitivity on the part of consumers and businesses. There can be no assurance we will be able to provide devices that compete effectively."
+        },
+        {
+          "section": "Item 1A. Risk Factors",
+          "text": "Within Google Cloud, we devote significant resources to develop and deploy our enterprise-ready cloud services, including Google Cloud Platform and Google Workspace, and we are advancing our AI platforms and models to support these tools and technologies, including the development of our custom TPUs and how we deliver them to our customers. We are incurring significant and increasing costs and new liabilities, including contingent liabilities, to build and maintain infrastructure to support cloud computing services, invest in cybersecurity, and hire talent. Meanwhile, our competitors are rapidly developing and deploying cloud-based services and capacity. Pricing and delivery models, which are subject to increasing regulatory scrutiny and requirements, are competitive and constantly evolving, and we may therefore not achieve our business objectives. Further, our business with financial services, healthcare, and public sector customers may present additional risks, including regulatory compliance risks. For instance, we may be subject to government audits and cost reviews, and any"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Please read the following discussion and analysis of our financial condition and results of operations together with \u201cNote about Forward-Looking Statements,\u201d Part I, Item 1 \"Business,\" Part I, Item 1A \"Risk Factors,\" and our consolidated financial statements and related notes included under Item 8 of this Annual Report on Form 10-K."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Expanded AI Offerings in our Products and Services: The continuing evolution of the online world has contributed to the growth of our business. We expect that this evolution, including user engagement with AI products and services, will continue to benefit our business and our revenues. As we continue to incorporate AI into our products and services, such as with AI Overviews and AI Mode in Search, and with enterprise AI solutions on our Google Cloud Platform, we may monetize differently than our historical consumer and enterprise offerings which could affect revenue growth rates and margin trends. When developing new products and services we generally focus first on user experience and then on monetization. At the same time, we face increasing competition, including from other developers and providers of AI products and services, which may affect our revenues."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Increasing Revenues Beyond Advertising: Revenues from cloud, consumer subscriptions, platforms, and devices, which may have differing characteristics than our advertising revenues, have grown over time. Certain of these revenues have been growing at a rate higher than our advertising revenues, becoming a larger percentage of our consolidated revenues, and we expect this trend to continue. The margins on these revenues vary significantly and are generally lower than the margins on our advertising revenues."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Increased Investment in Technical Infrastructure: We continue to invest in capital expenditures as we scale our technical infrastructure, in particular for AI, to meet the demand of our users and enterprise customers and to support research internally. We invested heavily in capital expenditures in 2025 and in 2026, we expect to significantly increase, relative to 2025, our investment in our technical infrastructure, including servers and network equipment, and data centers. The costs associated with operating our technical infrastructure - depreciation, energy, equipment, and network capacity - are expected to significantly increase as developing and serving AI offerings require more compute power than our historical consumer and enterprise offerings. While our technical infrastructure costs increase, we expect to continue to drive efficiencies in our data centers, for example, through the design of our AI models and our TPU and GPU-based technical infrastructure."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Continued Investment in Intellectual Property through R&D and Acquisitions: We continue to make significant research and development investments in areas of strategic focus as we seek to develop new, innovative offerings, and improve our existing offerings across our businesses. Acquisitions and strategic investments remain important elements in our use of capital and contribute to the breadth and depth of our offerings, expand our expertise in engineering and other functional areas, and build strong partnerships around strategic initiatives."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Traffic Acquisition Costs Growth and Rate Changes: We expect traffic acquisition costs (\"TAC\") paid to our distribution partners and Google Network partners to increase as our advertising revenues grow. Our overall TAC as a percentage of our advertising revenues (\"TAC rate\") has been decreasing primarily due to a revenue mix"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "shift from Google Network properties to Google Search & other properties. Our TAC rate will continue to be affected by changes in device mix; geographic mix; partner agreement terms; partner mix; the percentage of queries channeled through paid access points; product mix; the relative revenue growth rates of advertising revenues from different channels; and revenue share terms."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "In 2025, we raised capital through the issuance of debt and we expect to continue to assess the use of debt and other forms of financing in the future. We expect to continue to enter into finance leases, primarily for data centers. Additionally, in 2025, we provided credit support, such as through backstops and guarantees, to certain infrastructure related counterparties and may continue to provide additional credit support in the future."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "Changes in social, political, economic, tax, and regulatory conditions or in laws and policies governing a wide range of topics and related legal matters, including investigations, lawsuits, and regulatory actions, have resulted in fines and caused us to change our business practices. As the regulatory environment continues to evolve, we may continue to incur fines and we expect increased costs associated with compliance, modifications to our products and services, and limitations on our ability to pursue certain business practices. For additional information, see Part I, Item 1A Risk Factors and Legal Matters in Note 10 of the Notes to Consolidated Financial Statements included in Item 8 of this Annual Report on Form 10-K."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We generate revenues by delivering relevant, cost-effective online advertising; cloud-based solutions that provide enterprise customers of all sizes with infrastructure, platform services, and applications; and sales of other products and services, such as fees received for subscription-based products, apps and in-app purchases, and devices. For additional information on how we recognize revenue, see Note 1 of the Notes to Consolidated Financial Statements included in Item 8 of this Annual Report on Form 10-K."
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "\u2022Google Search & other, which includes revenues generated on Google search properties (including revenues from traffic generated by search distribution partners who use Google.com as their default search in browsers, toolbars, etc.), and other Google owned and operated properties like Gmail, Google Maps, and Google Play;"
+        },
+        {
+          "section": "Item 7. Management's Discussion and Analysis",
+          "text": "We use certain metrics to track how well traffic across various properties is monetized as it relates to our advertising revenues: paid clicks and cost-per-click pertain to traffic on Google Search & other properties, while impressions and cost-per-impression pertain to traffic on our Google Network properties."
+        }
+      ]
+    }
+  ]
+}
