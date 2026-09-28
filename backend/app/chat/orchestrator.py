@@ -65,16 +65,7 @@ def _best_excerpt(passage: Passage, question: str) -> str:
 
 
 def _speak(excerpt: str, company: str) -> str:
-    spoken = excerpt.replace("The Company", company).replace("the Company", company)
-    spoken = re.sub(r"\bWe\b", company, spoken)
-    spoken = re.sub(r"\bwe\b", company, spoken)
-    spoken = re.sub(r"\bOur\b", f"{company}'s", spoken)
-    spoken = re.sub(r"\bour\b", f"{company}'s", spoken)
-    spoken = re.sub(rf"\b{re.escape(company)} are\b", f"{company} is", spoken)
-    spoken = re.sub(rf"\b{re.escape(company)} were\b", f"{company} was", spoken)
-    spoken = re.sub(rf"\b{re.escape(company)} have\b", f"{company} has", spoken)
-    spoken = re.sub(rf"\b{re.escape(company)} do\b", f"{company} does", spoken)
-    return spoken
+    return excerpt.replace("The Company", company).replace("the Company", company)
 
 
 def _paragraph(passage: Passage, excerpt: str, label: str) -> str:
