@@ -11,6 +11,31 @@ from app.database.session import configure_engine, open_session  # noqa: E402
 from app.main import app  # noqa: E402
 
 _ready = False
+_PATH_HEADERS = (
+    "x-forwarded-uri",
+    "x-original-uri",
+    "x-invoke-path",
+    "x-matched-path",
+    "x-vercel-original-path",
+    "x-middleware-rewrite",
+)
+
+
+def _original_api_path(scope: dict) -> str | None:
+    raw_path = scope.get("raw_path") or b""
+    if raw_path.startswith(b"/api/"):
+        return raw_path.decode().split("?", 1)[0]
+    headers = {
+        key.decode().lower(): value.decode()
+        for key, value in scope.get("headers", [])
+        if isinstance(key, bytes)
+    }
+    for name in _PATH_HEADERS:
+        raw = headers.get(name, "")
+        path = raw.split("?", 1)[0]
+        if path.startswith("/api/"):
+            return path
+    return None
 
 
 def _boot() -> None:
@@ -28,6 +53,9 @@ def _boot() -> None:
 @app.middleware("http")
 async def boot_database(request, call_next):
     global _ready
+    path = _original_api_path(request.scope)
+    if path and request.scope.get("path") in {"/api", "/", ""}:
+        request.scope["path"] = path
     if not _ready:
         _boot()
         _ready = True
