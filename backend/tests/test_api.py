@@ -221,14 +221,25 @@ def test_company_snapshot_and_brief(client: TestClient) -> None:
     assert snapshot.status_code == 200
     revenue = next(metric for metric in snapshot.json()["metrics"] if metric["key"] == "revenue")
     assert revenue["current"]["display"] == "$416.2B"
+    assert revenue["current"]["value"] == 416161000000
     assert revenue["change"] == "+6.4%"
     assert revenue["current"]["sourceUrl"].startswith("https://www.sec.gov/")
+    body = snapshot.json()
+    assert body["industry"] == "Technology · Consumer electronics"
+    assert body["overview"].startswith("Gamers choose NVIDIA GPUs")
+    titles = [risk["title"] for risk in body["risks"]]
+    assert titles == ["Supply chain risk"]
     brief = client.post("/companies/AAPL/brief", headers=headers)
     assert brief.status_code == 200
     headings = [section["heading"] for section in brief.json()["sections"]]
-    assert "Financial performance" in headings
-    assert "Key risks" in headings
-    assert "Important takeaways" in headings
+    assert headings == [
+        "Business Performance",
+        "Financial Performance",
+        "Key Risks",
+        "Year-over-Year Changes",
+        "Management Commentary",
+        "Key Takeaways",
+    ]
     owner = _auth(client, "owner@driftwood.example")
     created = client.post(
         "/chat/stream",

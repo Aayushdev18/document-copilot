@@ -2,7 +2,13 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy.orm import Session
 
-from app.analysis.desk import build_brief, filing_for, risk_items
+from app.analysis.desk import (
+    build_brief,
+    filing_for,
+    industry_label,
+    overview_sentence,
+    risk_items,
+)
 from app.analysis.facts import company_financials, metric_rows
 from app.auth.dependencies import get_current_user
 from app.database.models import DocumentChunk, User
@@ -16,6 +22,7 @@ class FactYear(BaseModel):
 
     year: str
     end: str
+    value: float
     display: str
     accession: str
     filed: str
@@ -51,6 +58,7 @@ class DeskCitation(BaseModel):
 
 
 class RiskOut(BaseModel):
+    title: str
     text: str
     citation: DeskCitation
 
@@ -64,6 +72,8 @@ class SnapshotOut(BaseModel):
     filing_date: str = Field(serialization_alias="filingDate")
     source_url: str = Field(serialization_alias="sourceUrl")
     facts_url: str = Field(serialization_alias="factsUrl")
+    industry: str
+    overview: str
     metrics: list[MetricOut]
     risks: list[RiskOut]
 
@@ -112,6 +122,7 @@ def _metric_out(row: dict) -> MetricOut:
         return FactYear(
             year=point["year"],
             end=point["end"],
+            value=point["value"],
             display=display,
             accession=point["accession"],
             filed=point["filed"],
@@ -137,7 +148,11 @@ async def company_snapshot(
     company = _require_company(ticker)
     document = filing_for(session, ticker)
     risks = [
-        RiskOut(text=item["text"], citation=_citation(item["chunk"], str(index), item["text"]))
+        RiskOut(
+            title=item["title"],
+            text=item["text"],
+            citation=_citation(item["chunk"], str(index), item["text"]),
+        )
         for index, item in enumerate(risk_items(session, ticker), start=1)
     ]
     return SnapshotOut(
@@ -151,6 +166,8 @@ async def company_snapshot(
             document.source_url if document else company["metrics"][0]["current"]["sourceUrl"]
         ),
         facts_url=company["factsUrl"],
+        industry=industry_label(company["ticker"]),
+        overview=overview_sentence(session, company["ticker"]),
         metrics=[_metric_out(row) for row in metric_rows(ticker)],
         risks=risks,
     )

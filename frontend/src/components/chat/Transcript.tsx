@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react"
 
 import { Badge } from "@/components/ui/badge"
+import { filingLinks, sourceTrail } from "@/lib/sources"
 import type { ChatMessage, Citation } from "@/lib/types"
 
 type TranscriptProps = {
@@ -36,18 +37,18 @@ export function Transcript({
     <div className="min-h-0 flex-1 overflow-y-auto">
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-8 md:px-8">
         {showEmpty && (
-          <div className="pt-8 md:pt-16">
-            <p className="text-xs tracking-[0.18em] text-muted-foreground uppercase">
-              Driftwood Capital
+          <div className="pt-6">
+            <p className="text-xs tracking-[0.16em] text-muted-foreground uppercase">
+              Ask about this filing
             </p>
-            <h1 className="mt-3 font-heading text-4xl tracking-tight text-balance md:text-5xl">
-              Ask {companyName}.
+            <h1 className="mt-2 font-heading text-3xl tracking-tight text-balance">
+              {companyName}
             </h1>
-            <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
-              Questions stay on this company&apos;s latest 10-K. Financial figures come from
-              the filing&apos;s annual facts, and every passage keeps its section and paragraph.
+            <p className="mt-3 max-w-xl text-sm leading-7 text-muted-foreground">
+              Questions stay on this company&apos;s latest 10-K. Answers cite the passage or the
+              XBRL fact they came from.
             </p>
-            <div className="mt-8 grid gap-2">
+            <div className="mt-5 grid gap-2">
               {prompts.map((question) => (
                 <button
                   key={question}
@@ -80,7 +81,7 @@ export function Transcript({
         {streaming && (
           <article className="max-w-[46rem]">
             <p className="mb-2 text-[11px] tracking-[0.14em] text-muted-foreground uppercase">
-              Copilot
+              Answer
             </p>
             <div className="text-[15px] leading-7 whitespace-pre-wrap">{streaming}</div>
           </article>
@@ -114,21 +115,48 @@ function MessageView({
     )
   }
 
+  const links = filingLinks(message.content)
   return (
     <article className="max-w-[46rem]">
-      <p className="mb-2 text-[11px] tracking-[0.14em] text-muted-foreground uppercase">Copilot</p>
+      <p className="mb-2 text-[11px] tracking-[0.14em] text-muted-foreground uppercase">Answer</p>
       <div className="text-[15px] leading-7 whitespace-pre-wrap">{message.content}</div>
-      {message.citations.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-2">
-          {message.citations.map((citation) => (
-            <button key={citation.chunkId} type="button" onClick={() => onOpenCitation(citation)}>
-              <Badge variant="outline" className="h-7 px-2.5 font-mono">
-                [{citation.label}] {citation.locator ?? `${citation.ticker} · ${citation.section}`}
-              </Badge>
-            </button>
-          ))}
-        </div>
-      )}
+      <div className="mt-4 rounded-xl border bg-card px-4 py-3">
+        <p className="text-[11px] tracking-[0.14em] text-muted-foreground uppercase">Sources</p>
+        {message.citations.length > 0 && (
+          <ul className="mt-2 flex flex-col gap-2">
+            {message.citations.map((citation) => (
+              <li key={citation.chunkId}>
+                <button type="button" className="text-left" onClick={() => onOpenCitation(citation)}>
+                  <Badge variant="outline" className="h-auto max-w-full px-2.5 py-1 font-mono whitespace-normal">
+                    {sourceTrail(citation)}
+                  </Badge>
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+        {message.citations.length === 0 && links.length > 0 && (
+          <ul className="mt-2 flex flex-col gap-2">
+            {links.map((url) => (
+              <li key={url}>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm text-primary underline-offset-2 hover:underline"
+                >
+                  SEC XBRL company facts
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+        {message.citations.length === 0 && links.length === 0 && (
+          <p className="mt-2 text-sm text-muted-foreground">
+            No filing passage supports this answer.
+          </p>
+        )}
+      </div>
     </article>
   )
 }

@@ -8,8 +8,8 @@ FACTS_PATH = Path(__file__).resolve().parents[1] / "corpus" / "financials.json"
 
 METRIC_CUES = (
     ("revenue", ("revenue", "sales", "top line")),
-    ("net_income", ("net income", "net earnings")),
-    ("operating_income", ("operating income", "operating profit")),
+    ("net_income", ("net income", "net earnings", "profitability")),
+    ("operating_income", ("operating income", "operating profit", "profitability")),
     ("eps", ("eps", "earnings per share", "diluted eps")),
     ("cash", ("cash",)),
     ("debt", ("debt", "borrowing")),
@@ -71,8 +71,17 @@ def _selected_keys(question: str, available: list[str]) -> list[str]:
         key for key, cues in METRIC_CUES if any(cue in lowered for cue in cues) and key in available
     ]
     broad = any(
-        word in lowered
-        for word in ("compare", "year over year", "year-over-year", "last year", "yoy")
+        phrase in lowered
+        for phrase in (
+            "compare",
+            "year over year",
+            "year-over-year",
+            "last year",
+            "yoy",
+            "what changed",
+            "changed from",
+            "year to year",
+        )
     )
     if broad and not chosen:
         return available

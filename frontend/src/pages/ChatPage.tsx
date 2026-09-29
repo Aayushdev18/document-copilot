@@ -12,13 +12,25 @@ import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { api, isCitationList } from "@/lib/api"
 import { useAuth } from "@/lib/auth"
 import { ApiError, errorMessage } from "@/lib/http"
-import type { AnalystBrief, ChatMessage, Citation, CompanySnapshot, Corpus, ThreadSummary } from "@/lib/types"
+import type {
+  AnalystBrief,
+  ChatMessage,
+  Citation,
+  CompanySnapshot,
+  Corpus,
+  DeskPanel,
+  ThreadSummary,
+} from "@/lib/types"
 
-const companyPrompts = [
-  "What were the major risks this year?",
-  "Why did revenue increase?",
-  "Compare this year's revenue with last year.",
-]
+function filingPrompts(currentYear: string, priorYear: string): string[] {
+  return [
+    "Why did revenue increase?",
+    "What are the major risks?",
+    "How did profitability change?",
+    `What changed from ${priorYear} to ${currentYear}?`,
+    "Summarize management's outlook",
+  ]
+}
 
 export function ChatPage() {
   const { threadId } = useParams()
@@ -34,8 +46,8 @@ export function ChatPage() {
   const [navOpen, setNavOpen] = useState(false)
   const [citation, setCitation] = useState<Citation | null>(null)
   const [ticker, setTicker] = useState("AAPL")
-  const [panel, setPanel] = useState<"snapshot" | "risks" | "chat" | "brief">("snapshot")
-  const [snapshot, setSnapshot] = useState<CompanySnapshot | null>(null)
+  const [panel, setPanel] = useState<DeskPanel>("snapshot")
+  const [snapshots, setSnapshots] = useState<Record<string, CompanySnapshot>>({})
   const [brief, setBrief] = useState<AnalystBrief | null>(null)
   const [briefing, setBriefing] = useState(false)
   const [briefError, setBriefError] = useState<string | null>(null)
@@ -117,13 +129,12 @@ export function ChatPage() {
   }
 
   useEffect(() => {
-    if (!session) return
+    if (!session || !corpus) return
     let cancelled = false
-    setSnapshot(null)
-    api
-      .snapshot(ticker)
-      .then((next) => {
-        if (!cancelled) setSnapshot(next)
+    Promise.all(corpus.filings.map((filing) => api.snapshot(filing.ticker)))
+      .then((rows) => {
+        if (cancelled) return
+        setSnapshots(Object.fromEntries(rows.map((row) => [row.ticker, row])))
       })
       .catch((caught) => {
         if (!cancelled) setError(errorMessage(caught))
@@ -131,7 +142,7 @@ export function ChatPage() {
     return () => {
       cancelled = true
     }
-  }, [session, ticker])
+  }, [session, corpus])
 
   async function generateBrief() {
     setBriefing(true)
@@ -208,6 +219,10 @@ export function ChatPage() {
 
   if (!session) return null
 
+  const snapshot = snapshots[ticker] ?? null
+  const currentYear = snapshot?.metrics[0]?.current.year ?? "this year"
+  const priorYear = snapshot?.metrics[0]?.prior.year ?? "last year"
+
   const nav = (
     <DeskNav
       threads={threads}
@@ -257,7 +272,7 @@ export function ChatPage() {
           filings={corpus?.filings ?? []}
           ticker={ticker}
           panel={panel}
-          snapshot={snapshot}
+          snapshots={snapshots}
           brief={brief}
           briefError={briefError}
           briefing={briefing}
@@ -284,7 +299,7 @@ export function ChatPage() {
               running={running}
               error={error}
               companyName={snapshot?.company ?? ticker}
-              prompts={companyPrompts}
+              prompts={filingPrompts(currentYear, priorYear)}
               onSuggest={(question) => {
                 void ask(question)
               }}

@@ -56,6 +56,7 @@ export type Corpus = {
 export type FactYear = {
   year: string
   end: string
+  value: number
   display: string
   accession: string
   filed: string
@@ -78,9 +79,13 @@ export type CompanySnapshot = {
   filingDate: string
   sourceUrl: string
   factsUrl: string
+  industry: string
+  overview: string
   metrics: FinancialMetric[]
-  risks: { text: string; citation: Citation }[]
+  risks: { title: string; text: string; citation: Citation }[]
 }
+
+export type DeskPanel = "snapshot" | "risks" | "chat" | "brief" | "compare"
 
 export type AnalystBrief = {
   ticker: string
