@@ -1,5 +1,7 @@
 # Document Copilot Architecture
 
+The desk that runs today uses SQLite full-text search, a local email session, and Vercel. It does not use embeddings, pgvector, Supabase, or Railway. This document is the original target design.
+
 ## Purpose
 
 Document Copilot is an internal research assistant for analysts who need grounded answers from a curated SEC filing corpus. The architecture must optimize for trust: every answer is generated from retrieved source passages, every factual claim is citable, and the system fails clearly when the corpus does not support an answer.

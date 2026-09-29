@@ -1,6 +1,8 @@
 # Document Copilot
 
-An internal AI chatbot that lets analysts query a corpus of documents in plain English and get sourced, citable answers.
+An analyst desk for Driftwood Capital. Pick Apple, Microsoft, NVIDIA, Amazon, or Alphabet, read the latest 10-K, and get an answer that cites the passage or the XBRL fact it came from.
+
+Live desk: [frontend-jn8z.vercel.app](https://frontend-jn8z.vercel.app). Sign in with any email.
 
 ## The client
 
@@ -8,18 +10,20 @@ An internal AI chatbot that lets analysts query a corpus of documents in plain E
 
 Full brief: [docs/client-brief.md](docs/client-brief.md)
 
-## Stack
+## What runs today
 
-| Layer              | Choice                                               |
-| ------------------ | ---------------------------------------------------- |
-| Backend            | Python + FastAPI                                     |
-| Frontend           | Vite + React SPA + TypeScript                        |
-| Database           | Supabase Postgres (users, chats, documents, chunks)  |
-| Migrations         | SQLAlchemy models + Alembic                          |
-| Retrieval          | Supabase `pgvector` + Postgres full-text search      |
-| Auth               | Supabase Auth (email only)                           |
-| Hosting            | Railway                                              |
-| LLM + embeddings   | OpenAI                                               |
+| Layer | Choice |
+| ----- | ------ |
+| Backend | Python + FastAPI |
+| Frontend | Vite + React + TypeScript + Tailwind |
+| Database | SQLite (threads, messages, filing chunks) |
+| Retrieval | SQLite full-text search over Item 1, Item 1A, and Item 7 passages |
+| Figures | SEC XBRL company facts, cited by accession |
+| Auth | Local email session. Any email works on this desk |
+| Hosting | Vercel |
+| Answers | A writer over the retrieved passage. Set `OPENAI_API_KEY` to let `gpt-4o-mini` draft the same grounded reply |
+
+[docs/architecture.md](docs/architecture.md) is the original target design (Supabase, pgvector, Railway). That design is not what this desk runs. There is no embedding index.
 
 ## Repo layout
 
@@ -45,7 +49,7 @@ Install these before setting up `backend/` or `frontend/`:
 | [Node.js](https://nodejs.org/) | 20+ (LTS) | Frontend toolchain | nodejs.org or `nvm install --lts` |
 | [pnpm](https://pnpm.io/installation) | latest | Frontend package manager | `corepack enable && corepack prepare pnpm@latest --activate` |
 
-You also need accounts/keys for external services once the app is wired up. Start with [docs/guides/supabase-setup.md](docs/guides/supabase-setup.md) (account + project), then create an [OpenAI API key](https://platform.openai.com/api-keys) when the LLM layer is wired up.
+No Supabase project or OpenAI key is required to run the desk. An [OpenAI API key](https://platform.openai.com/api-keys) is optional and only changes who writes the prose. The [Supabase guide](docs/guides/supabase-setup.md) belongs to the target design in `docs/architecture.md`.
 
 ## Running locally
 
@@ -68,7 +72,7 @@ Open [http://127.0.0.1:43123](http://127.0.0.1:43123). The Vite dev server proxi
 
 Refresh the filing excerpts with `python backend/ingest/build_seed.py` (SEC requires a descriptive User-Agent; edit it at the top of that script). Restart the backend so it reloads an empty database, or delete `backend/document_copilot.db` first.
 
-`AUTH_MODE=supabase` is reserved for the hosted auth path in the architecture notes. The process refuses to start in that mode until the Supabase settings are present. Alembic, pgvector, and model-written answers are the next steps in [docs/architecture.md](docs/architecture.md); they are not required to use the desk.
+`AUTH_MODE=supabase` is reserved for the hosted auth path in the architecture notes. The process refuses to start in that mode until the Supabase settings are present.
 
 Setup guides:
 

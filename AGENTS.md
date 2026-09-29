@@ -2,6 +2,8 @@
 
 This file is the source of truth for any coding agent (Claude Code, Cursor, Codex, etc.) working in this repo. Read it before touching code.
 
+The desk that is deployed uses SQLite full-text search, a local email session, and Vercel. Do not describe it as embeddings, pgvector, Supabase, or Railway. The stack list below is the original target design in `docs/architecture.md`.
+
 ## Stack
 
 - **Backend:** Python + FastAPI
