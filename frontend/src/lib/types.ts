@@ -82,6 +82,7 @@ export type CompanySnapshot = {
   industry: string
   overview: string
   segments: string
+  segmentCitation: Citation | null
   metrics: FinancialMetric[]
   risks: { title: string; text: string; citation: Citation }[]
 }

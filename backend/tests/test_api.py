@@ -247,6 +247,8 @@ def test_company_snapshot_and_brief(client: TestClient) -> None:
     assert body["overview"].startswith("Gamers choose NVIDIA GPUs")
     titles = [risk["title"] for risk in body["risks"]]
     assert titles == ["Supply chain risk"]
+    assert body["segmentCitation"]["passage"].startswith("Gamers choose NVIDIA")
+    assert body["segmentCitation"]["section"].startswith("Item 1")
     brief = client.post("/companies/AAPL/brief", headers=headers)
     assert brief.status_code == 200
     headings = [section["heading"] for section in brief.json()["sections"]]

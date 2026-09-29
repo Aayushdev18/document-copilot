@@ -1,4 +1,4 @@
-import type { Citation } from "@/lib/types"
+import type { Citation, CompanySnapshot } from "@/lib/types"
 
 
 export function sectionTrail(section: string): string {
@@ -23,6 +23,30 @@ export function sourceTrail(citation: Citation): string {
 export function filingLinks(content: string): string[] {
   const matches = content.match(/https:\/\/www\.sec\.gov\/\S+/g) ?? []
   return [...new Set(matches.map((url) => url.replace(/[).,]+$/, "")))]
+}
+
+export function revenueCitation(snapshot: CompanySnapshot): Citation | null {
+  const metric = snapshot.metrics.find((item) => item.key === "revenue")
+  if (!metric) return null
+  const current = metric.current
+  const passage = [
+    `${snapshot.company} reported revenue of ${current.display} for the year ended ${current.end}.`,
+    `That is ${metric.change} versus ${metric.prior.display} for the year ended ${metric.prior.end}.`,
+    `us-gaap:${metric.concept}, accession ${current.accession}, filed ${current.filed}.`,
+  ].join(" ")
+  return {
+    chunkId: `xbrl-${snapshot.ticker}-revenue`,
+    label: "1",
+    excerpt: passage,
+    passage,
+    ticker: snapshot.ticker,
+    company: snapshot.company,
+    form: snapshot.form,
+    filingDate: current.filed,
+    section: "Item 8. Financial Statements",
+    sourceUrl: current.sourceUrl,
+    locator: "Item 8 · SEC XBRL",
+  }
 }
 
 export function xbrlCitations(content: string, company: string, ticker: string): Citation[] {

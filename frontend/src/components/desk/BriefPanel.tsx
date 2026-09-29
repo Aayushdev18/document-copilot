@@ -1,3 +1,4 @@
+import { CitedText } from "@/components/chat/CitedText"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import type { AnalystBrief, Citation } from "@/lib/types"
@@ -72,7 +73,12 @@ export function BriefPanel({
             {String(index + 1).padStart(2, "0")}
           </p>
           <h3 className="mt-1 font-heading text-xl">{section.heading}</h3>
-          <p className="mt-3 text-sm leading-7 whitespace-pre-wrap">{section.body}</p>
+          <CitedText
+            text={section.body}
+            citations={section.citations}
+            onOpen={onOpenCitation}
+            className="mt-3 text-sm leading-7 whitespace-pre-wrap"
+          />
           {section.citations.length > 0 && (
             <div className="mt-3 flex flex-col gap-2">
               <p className="text-[11px] tracking-[0.14em] text-muted-foreground uppercase">Sources</p>

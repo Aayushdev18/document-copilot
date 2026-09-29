@@ -1,31 +1,19 @@
 import { useState } from "react"
 
+import { CitedText } from "@/components/chat/CitedText"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { api } from "@/lib/api"
 import { shortCompany } from "@/lib/companies"
 import { errorMessage } from "@/lib/http"
 import { changeTone, formatChange, metricByKey } from "@/lib/insights"
-import { sectionTrail } from "@/lib/sources"
+import { revenueCitation, sectionTrail } from "@/lib/sources"
 import type { Citation, CompanySnapshot, Filing } from "@/lib/types"
-
-const ROWS = [
-  { key: "revenue", label: "Revenue", field: "current" },
-  { key: "revenue", label: "Revenue growth", field: "change" },
-  { key: "net_income", label: "Net income growth", field: "change" },
-] as const
 
 type ComparePanelProps = {
   filings: Filing[]
   snapshots: Record<string, CompanySnapshot>
   onOpenCitation: (citation: Citation) => void
-}
-
-function cell(snapshot: CompanySnapshot, key: string, field: "current" | "change"): string {
-  const metric = metricByKey(snapshot, key)
-  if (!metric) return "—"
-  if (field === "current") return metric.current.display
-  return formatChange(metric.change)
 }
 
 function headline(filings: Filing[]): string {
@@ -122,53 +110,75 @@ export function ComparePanel({ filings, snapshots, onOpenCitation }: ComparePane
             </tr>
           </thead>
           <tbody>
-            {ROWS.map((row) => (
-              <tr key={row.label} className="border-b last:border-0">
-                <td className="px-3 py-2">{row.label}</td>
-                {chosen.map((filing) => {
-                  const snapshot = snapshots[filing.ticker]
-                  const value = snapshot ? cell(snapshot, row.key, row.field) : "…"
-                  const metric = snapshot ? metricByKey(snapshot, row.key) : undefined
-                  const tone = row.field === "change" && metric ? changeTone(metric.change) : "flat"
-                  let color = ""
-                  if (tone === "up") color = "text-primary"
-                  if (tone === "down") color = "text-destructive"
-                  return (
-                    <td key={filing.ticker} className={`px-3 py-2 font-mono ${color}`}>
-                      {value}
-                    </td>
-                  )
-                })}
-              </tr>
-            ))}
             <tr className="border-b">
-              <td className="px-3 py-2">Major risks</td>
+              <td className="px-3 py-3 align-top">Revenue</td>
               {chosen.map((filing) => {
-                const risks = snapshots[filing.ticker]?.risks ?? []
+                const snapshot = snapshots[filing.ticker]
+                const metric = snapshot ? metricByKey(snapshot, "revenue") : undefined
+                const tone = metric ? changeTone(metric.change) : "flat"
+                let color = ""
+                if (tone === "up") color = "text-primary"
+                if (tone === "down") color = "text-destructive"
+                const source = snapshot ? revenueCitation(snapshot) : null
                 return (
-                  <td key={filing.ticker} className="px-3 py-2 align-top text-sm leading-6">
-                    {risks.length === 0 && "…"}
-                    {risks.slice(0, 3).map((risk) => (
+                  <td key={filing.ticker} className="px-3 py-3 align-top">
+                    <p className="font-mono">{metric ? metric.current.display : "…"}</p>
+                    {metric && <p className={`font-mono text-xs ${color}`}>{formatChange(metric.change)}</p>}
+                    {source && (
                       <button
-                        key={risk.citation.chunkId}
                         type="button"
-                        className="mb-1 block text-left underline-offset-2 hover:underline"
-                        onClick={() => onOpenCitation(risk.citation)}
+                        className="mt-2 text-xs text-primary underline-offset-2 hover:underline"
+                        onClick={() => onOpenCitation(source)}
                       >
-                        {risk.title}
+                        source
                       </button>
+                    )}
+                  </td>
+                )
+              })}
+            </tr>
+            <tr className="border-b">
+              <td className="px-3 py-3 align-top">Risks</td>
+              {chosen.map((filing) => {
+                const risks = snapshots[filing.ticker]?.risks.slice(0, 3) ?? []
+                return (
+                  <td key={filing.ticker} className="px-3 py-3 align-top text-sm leading-6">
+                    {risks.length === 0 && "…"}
+                    {risks.map((risk) => (
+                      <p key={risk.citation.chunkId}>
+                        {risk.title}{" "}
+                        <button
+                          type="button"
+                          className="text-xs text-primary underline-offset-2 hover:underline"
+                          onClick={() => onOpenCitation(risk.citation)}
+                        >
+                          source
+                        </button>
+                      </p>
                     ))}
                   </td>
                 )
               })}
             </tr>
             <tr>
-              <td className="px-3 py-2 align-top">Key business segments</td>
-              {chosen.map((filing) => (
-                <td key={filing.ticker} className="px-3 py-2 align-top text-sm leading-6">
-                  {snapshots[filing.ticker]?.segments ?? "…"}
-                </td>
-              ))}
+              <td className="px-3 py-3 align-top">Business performance</td>
+              {chosen.map((filing) => {
+                const snapshot = snapshots[filing.ticker]
+                return (
+                  <td key={filing.ticker} className="px-3 py-3 align-top text-sm leading-6">
+                    {snapshot?.segments ?? "…"}
+                    {snapshot?.segmentCitation && (
+                      <button
+                        type="button"
+                        className="mt-2 block text-xs text-primary underline-offset-2 hover:underline"
+                        onClick={() => onOpenCitation(snapshot.segmentCitation as Citation)}
+                      >
+                        source
+                      </button>
+                    )}
+                  </td>
+                )
+              })}
             </tr>
           </tbody>
         </table>
@@ -192,8 +202,13 @@ export function ComparePanel({ filings, snapshots, onOpenCitation }: ComparePane
           </p>
         )}
         {narrative && (
-          <div className="mt-4 text-sm leading-7 whitespace-pre-wrap">
-            {narrative}
+          <div className="mt-4">
+            <CitedText
+              text={narrative}
+              citations={sources}
+              onOpen={onOpenCitation}
+              className="text-sm leading-7 whitespace-pre-wrap"
+            />
             {writing && (
               <span className="ml-0.5 inline-block h-4 w-px animate-pulse bg-foreground align-middle" />
             )}

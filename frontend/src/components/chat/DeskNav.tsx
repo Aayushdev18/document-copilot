@@ -1,5 +1,6 @@
 import { Plus, Trash2 } from "lucide-react"
 
+import { HowItWorks } from "@/components/desk/HowItWorks"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import type { Corpus, ThreadSummary } from "@/lib/types"
@@ -41,6 +42,7 @@ export function DeskNav({
             ? `${corpus.documentCount} latest 10-Ks · ${corpus.passageCount} passages`
             : "Loading the corpus"}
         </p>
+        <HowItWorks />
         {corpus && (
           <div className="mt-3 flex flex-wrap gap-1.5">
             {corpus.filings.map((filing) => (

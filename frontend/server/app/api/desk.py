@@ -9,7 +9,7 @@ from app.analysis.desk import (
     industry_label,
     overview_sentence,
     risk_items,
-    segment_sentence,
+    segment_support,
 )
 from app.analysis.facts import company_financials, metric_rows
 from app.auth.dependencies import get_current_user
@@ -77,6 +77,9 @@ class SnapshotOut(BaseModel):
     industry: str
     overview: str
     segments: str
+    segment_citation: DeskCitation | None = Field(
+        default=None, serialization_alias="segmentCitation"
+    )
     metrics: list[MetricOut]
     risks: list[RiskOut]
 
@@ -158,6 +161,10 @@ async def company_snapshot(
         )
         for index, item in enumerate(risk_items(session, ticker), start=1)
     ]
+    segment_text, segment_chunk = segment_support(session, company["ticker"])
+    segment_citation = (
+        _citation(segment_chunk, "segment", segment_text) if segment_chunk is not None else None
+    )
     return SnapshotOut(
         ticker=company["ticker"],
         company=company["company"],
@@ -171,7 +178,8 @@ async def company_snapshot(
         facts_url=company["factsUrl"],
         industry=industry_label(company["ticker"]),
         overview=overview_sentence(session, company["ticker"]),
-        segments=segment_sentence(session, company["ticker"]),
+        segments=segment_text,
+        segment_citation=segment_citation,
         metrics=[_metric_out(row) for row in metric_rows(ticker)],
         risks=risks,
     )

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
 
+import { CitedText } from "@/components/chat/CitedText"
 import { Badge } from "@/components/ui/badge"
 import { sourceTrail, xbrlCitations } from "@/lib/sources"
 import type { ChatMessage, Citation } from "@/lib/types"
@@ -131,10 +132,16 @@ function MessageView({
   }
 
   const facts = message.citations.length === 0 ? xbrlCitations(message.content, companyName, ticker) : []
+  const citations = message.citations.length > 0 ? message.citations : facts
   return (
     <article className="max-w-[46rem]">
       <p className="mb-2 text-[11px] tracking-[0.14em] text-muted-foreground uppercase">Answer</p>
-      <div className="text-[15px] leading-7 whitespace-pre-wrap">{message.content}</div>
+      <CitedText
+        text={message.content}
+        citations={citations}
+        onOpen={onOpenCitation}
+        className="text-[15px] leading-7 whitespace-pre-wrap"
+      />
       <div className="mt-4 rounded-xl border bg-card px-4 py-3">
         <p className="text-[11px] tracking-[0.14em] text-muted-foreground uppercase">Sources</p>
         {message.citations.length > 0 && (

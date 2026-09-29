@@ -166,6 +166,15 @@ def segment_sentence(session: Session, ticker: str) -> str:
     return ranked[0][1]
 
 
+def segment_support(session: Session, ticker: str) -> tuple[str, DocumentChunk | None]:
+    sentence = segment_sentence(session, ticker)
+    collapsed = " ".join(sentence.split())
+    for chunk in section_chunks(session, ticker, "Item 1."):
+        if collapsed and collapsed in " ".join(chunk.text.split()):
+            return sentence, chunk
+    return sentence, None
+
+
 def risk_items(session: Session, ticker: str, limit: int = 6) -> list[dict]:
     grouped: dict[str, list[dict]] = {}
     seen: list[str] = []
