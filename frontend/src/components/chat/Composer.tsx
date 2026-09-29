@@ -1,5 +1,5 @@
 import { ArrowUp } from "lucide-react"
-import { useState, type KeyboardEvent } from "react"
+import { useEffect, useRef, useState, type KeyboardEvent } from "react"
 
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
@@ -12,6 +12,11 @@ type ComposerProps = {
 
 export function Composer({ running, placeholder = "Ask about a filing…", onSubmit }: ComposerProps) {
   const [value, setValue] = useState("")
+  const field = useRef<HTMLTextAreaElement>(null)
+
+  useEffect(() => {
+    field.current?.focus()
+  }, [])
 
   function submit() {
     const question = value.trim()
@@ -37,6 +42,7 @@ export function Composer({ running, placeholder = "Ask about a filing…", onSub
         }}
       >
         <Textarea
+          ref={field}
           value={value}
           onChange={(event) => setValue(event.target.value)}
           onKeyDown={onKeyDown}

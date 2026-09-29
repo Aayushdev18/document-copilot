@@ -231,10 +231,15 @@ export function ChatPage() {
       email={session.email}
       onNew={() => {
         setNavOpen(false)
-        navigate("/")
+        setPanel("chat")
+        setError(null)
+        setStreaming("")
+        if (!running) setMessages([])
+        if (threadId) navigate("/")
       }}
       onSelect={(id) => {
         setNavOpen(false)
+        setPanel("chat")
         navigate(`/c/${id}`)
       }}
       onDelete={(id) => {
