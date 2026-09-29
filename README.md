@@ -55,6 +55,7 @@ The desk runs without Supabase or an OpenAI key. Without a key, answers are shor
 # backend — from the repo root
 cd backend
 uv sync
+# without uv: pip install -r requirements.txt
 uv run uvicorn app.main:app --host 0.0.0.0 --port 43124
 
 # frontend — second terminal
