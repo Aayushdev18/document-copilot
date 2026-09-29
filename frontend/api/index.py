@@ -2,11 +2,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-CANDIDATES = (HERE.parent / "server", HERE.parent.parent / "backend")
-for candidate in CANDIDATES:
-    if (candidate / "app" / "main.py").is_file():
-        sys.path.insert(0, str(candidate))
-        break
+sys.path.insert(0, str(HERE.parent / "server"))
 
 from app.config import get_settings  # noqa: E402
 from app.database.schema import prepare_database  # noqa: E402

@@ -1,0 +1,764 @@
+{
+  "companies": [
+    {
+      "ticker": "AAPL",
+      "cik": "0000320193",
+      "company": "Apple Inc.",
+      "factsUrl": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "metrics": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-09-27",
+            "value": 416161000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-09-28",
+            "value": 391035000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          }
+        },
+        {
+          "key": "net_income",
+          "label": "Net income",
+          "concept": "NetIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-09-27",
+            "value": 112010000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-09-28",
+            "value": 93736000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          }
+        },
+        {
+          "key": "operating_income",
+          "label": "Operating income",
+          "concept": "OperatingIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-09-27",
+            "value": 133050000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-09-28",
+            "value": 123216000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          }
+        },
+        {
+          "key": "eps",
+          "label": "Diluted EPS",
+          "concept": "EarningsPerShareDiluted",
+          "unit": "USD/shares",
+          "current": {
+            "year": "2025",
+            "end": "2025-09-27",
+            "value": 7.46,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-09-28",
+            "value": 6.08,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash",
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-09-27",
+            "value": 35934000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-09-28",
+            "value": 29943000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Long-term debt",
+          "concept": "LongTermDebt",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-09-27",
+            "value": 90678000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-09-28",
+            "value": 96662000000,
+            "accession": "0000320193-25-000079",
+            "filed": "2025-10-31",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "cik": "0000789019",
+      "company": "Microsoft Corporation",
+      "factsUrl": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+      "metrics": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-06-30",
+            "value": 331839000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-06-30",
+            "value": 281724000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          }
+        },
+        {
+          "key": "net_income",
+          "label": "Net income",
+          "concept": "NetIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-06-30",
+            "value": 133749000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-06-30",
+            "value": 101832000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          }
+        },
+        {
+          "key": "operating_income",
+          "label": "Operating income",
+          "concept": "OperatingIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-06-30",
+            "value": 155237000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-06-30",
+            "value": 128528000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          }
+        },
+        {
+          "key": "eps",
+          "label": "Diluted EPS",
+          "concept": "EarningsPerShareDiluted",
+          "unit": "USD/shares",
+          "current": {
+            "year": "2026",
+            "end": "2026-06-30",
+            "value": 17.95,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-06-30",
+            "value": 13.64,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash",
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-06-30",
+            "value": 20935000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-06-30",
+            "value": 30242000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Long-term debt",
+          "concept": "LongTermDebt",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-06-30",
+            "value": 40294000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-06-30",
+            "value": 43151000000,
+            "accession": "0001193125-26-323660",
+            "filed": "2026-07-29",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "cik": "0001045810",
+      "company": "NVIDIA Corporation",
+      "factsUrl": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+      "metrics": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "concept": "Revenues",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-01-25",
+            "value": 215938000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-01-26",
+            "value": 130497000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          }
+        },
+        {
+          "key": "net_income",
+          "label": "Net income",
+          "concept": "NetIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-01-25",
+            "value": 120067000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-01-26",
+            "value": 72880000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          }
+        },
+        {
+          "key": "operating_income",
+          "label": "Operating income",
+          "concept": "OperatingIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-01-25",
+            "value": 130387000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-01-26",
+            "value": 81453000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          }
+        },
+        {
+          "key": "eps",
+          "label": "Diluted EPS",
+          "concept": "EarningsPerShareDiluted",
+          "unit": "USD/shares",
+          "current": {
+            "year": "2026",
+            "end": "2026-01-25",
+            "value": 4.9,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-01-26",
+            "value": 2.94,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash",
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-01-25",
+            "value": 10605000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-01-26",
+            "value": 8589000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Long-term debt",
+          "concept": "LongTermDebt",
+          "unit": "USD",
+          "current": {
+            "year": "2026",
+            "end": "2026-01-25",
+            "value": 8468000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          },
+          "prior": {
+            "year": "2025",
+            "end": "2025-01-26",
+            "value": 8463000000,
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.html"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "cik": "0001018724",
+      "company": "Amazon.com, Inc.",
+      "factsUrl": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+      "metrics": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 716924000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 637959000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          }
+        },
+        {
+          "key": "net_income",
+          "label": "Net income",
+          "concept": "NetIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 77670000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 59248000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          }
+        },
+        {
+          "key": "operating_income",
+          "label": "Operating income",
+          "concept": "OperatingIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 79975000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 68593000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          }
+        },
+        {
+          "key": "eps",
+          "label": "Diluted EPS",
+          "concept": "EarningsPerShareDiluted",
+          "unit": "USD/shares",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 7.17,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 5.53,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash",
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 86810000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 78779000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Long-term debt",
+          "concept": "LongTermDebt",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 68836000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 58000000000,
+            "accession": "0001018724-26-000004",
+            "filed": "2026-02-06",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/0001018724-26-000004-index.html"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "cik": "0001652044",
+      "company": "Alphabet Inc.",
+      "factsUrl": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+      "metrics": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "concept": "Revenues",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 402836000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 350018000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          }
+        },
+        {
+          "key": "net_income",
+          "label": "Net income",
+          "concept": "NetIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 132170000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 100118000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          }
+        },
+        {
+          "key": "operating_income",
+          "label": "Operating income",
+          "concept": "OperatingIncomeLoss",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 129039000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 112390000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          }
+        },
+        {
+          "key": "eps",
+          "label": "Diluted EPS",
+          "concept": "EarningsPerShareDiluted",
+          "unit": "USD/shares",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 10.81,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 8.04,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash",
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 30708000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 23466000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Long-term debt",
+          "concept": "LongTermDebt",
+          "unit": "USD",
+          "current": {
+            "year": "2025",
+            "end": "2025-12-31",
+            "value": 49085000000,
+            "accession": "0001652044-26-000018",
+            "filed": "2026-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html"
+          },
+          "prior": {
+            "year": "2024",
+            "end": "2024-12-31",
+            "value": 12000000000,
+            "accession": "0001652044-25-000014",
+            "filed": "2025-02-05",
+            "form": "10-K",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/0001652044-25-000014-index.html"
+          }
+        }
+      ]
+    }
+  ]
+}

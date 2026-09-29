@@ -3,7 +3,7 @@
   "functions": {
     "api/index.py": {
       "maxDuration": 60,
-      "includeFiles": "{server/app/**,../backend/app/**}"
+      "includeFiles": "server/app/**"
     }
   },
   "rewrites": [
