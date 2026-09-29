@@ -50,7 +50,9 @@ async def create_session(
         user = User(id=str(uuid.uuid4()), email=email, created_at=datetime.now(UTC))
         session.add(user)
         session.commit()
-    token = issue_token(user.id, settings.local_auth_secret, settings.token_ttl_seconds)
+    token = issue_token(
+        user.id, settings.local_auth_secret, settings.token_ttl_seconds, email=user.email
+    )
     return SessionResponse(token=token, email=user.email, user_id=user.id)
 
 

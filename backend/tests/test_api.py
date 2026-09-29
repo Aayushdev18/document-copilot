@@ -108,6 +108,21 @@ def test_vercel_database_is_writable(monkeypatch) -> None:
         get_settings.cache_clear()
 
 
+def test_session_works_after_the_user_row_disappears(client: TestClient) -> None:
+    headers = _auth(client, "desk@driftwood.example")
+    assert db_session.SessionLocal is not None
+    session = db_session.SessionLocal()
+    session.execute(text("DELETE FROM users"))
+    session.commit()
+    session.close()
+    threads = client.get("/threads", headers=headers)
+    assert threads.status_code == 200
+    assert threads.json() == []
+    profile = client.get("/auth/me", headers=headers)
+    assert profile.status_code == 200
+    assert profile.json()["email"] == "desk@driftwood.example"
+
+
 def test_session_rejects_a_bad_email(client: TestClient) -> None:
     response = client.post("/auth/session", json={"email": "not-an-email"})
     assert response.status_code == 422
