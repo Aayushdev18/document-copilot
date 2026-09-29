@@ -96,6 +96,16 @@ def _events(body: str) -> list[tuple[str, dict]]:
 
 def test_health(client: TestClient) -> None:
     assert client.get("/health").json() == {"status": "ok"}
+    assert client.get("/api/health").json() == {"status": "ok"}
+
+
+def test_vercel_database_is_writable(monkeypatch) -> None:
+    monkeypatch.setenv("VERCEL", "1")
+    get_settings.cache_clear()
+    try:
+        assert get_settings().database_url == "sqlite:////tmp/document_copilot.db"
+    finally:
+        get_settings.cache_clear()
 
 
 def test_session_rejects_a_bad_email(client: TestClient) -> None:

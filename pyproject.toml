@@ -1,0 +1,23 @@
+[project]
+name = "document-copilot"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.141.1",
+    "httpx==0.28.1",
+    "pydantic==2.13.5",
+    "pydantic-settings==2.15.0",
+    "sqlalchemy==2.0.54",
+    "structlog==26.1.0",
+    "uvicorn[standard]==0.53.0",
+]
+
+[tool.vercel]
+entrypoint = "api.index:app"
+
+[tool.vercel.scripts]
+build = "corepack enable && corepack prepare pnpm@10.11.0 --activate && pnpm --dir frontend install --frozen-lockfile && pnpm --dir frontend build && rm -rf public && mkdir -p public && cp -a frontend/dist/. public/"
+
+[tool.vercel.fastapi.static]
+cdn = true
+exclude = true

@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     supabase_service_role_key: str | None = None
     openai_api_key: str | None = None
     openai_model: str = "gpt-4o-mini"
+    vercel: str | None = None
 
     @model_validator(mode="after")
     def require_mode_secrets(self) -> "Settings":
@@ -39,6 +40,8 @@ class Settings(BaseSettings):
                 raise ValueError(
                     "Missing required settings for AUTH_MODE=supabase: " + ", ".join(missing)
                 )
+        if self.vercel:
+            self.database_url = "sqlite:////tmp/document_copilot.db"
         return self
 
     @property

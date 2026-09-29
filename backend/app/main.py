@@ -48,8 +48,11 @@ def create_app() -> FastAPI:
     )
     app.include_router(auth_router)
     app.include_router(chat_router)
+    app.include_router(auth_router, prefix="/api")
+    app.include_router(chat_router, prefix="/api")
 
     @app.get("/health")
+    @app.get("/api/health")
     async def health() -> dict[str, str]:
         return {"status": "ok"}
 
