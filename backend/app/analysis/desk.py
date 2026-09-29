@@ -8,7 +8,9 @@ from app.database.models import DocumentChunk, SourceDocument
 
 INTRO_MARKERS = (
     "following summarizes",
+    "following risk factors",
     "should be read in conjunction",
+    "should be considered in addition",
     "not exhaustive",
     "not a complete statement",
     "complete statement of all potential",

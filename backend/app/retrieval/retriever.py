@@ -138,13 +138,71 @@ def contains_term(term: str, text_lower: str) -> bool:
     )
 
 
+_RISK_INTROS = (
+    "following summarizes",
+    "following risk factors",
+    "should be read in conjunction",
+    "should be considered in addition",
+    "not exhaustive",
+    "not a complete statement",
+    "complete statement of all potential",
+)
+
+
+def _asks_about_risks(terms: list[str]) -> bool:
+    return any(term == "risk" or term.startswith("risk") for term in terms)
+
+
+def _is_risk_intro(body: str) -> bool:
+    sentence = " ".join(body.split())
+    sentence = re.split(r"(?<=[.!?])\s+", sentence)[0].lower()
+    return any(marker in sentence for marker in _RISK_INTROS)
+
+
+def _section_passages(session: Session, ticker: str, needle: str, limit: int) -> list[Passage]:
+    rows = session.execute(
+        select(DocumentChunk, SourceDocument)
+        .join(SourceDocument, DocumentChunk.document_id == SourceDocument.id)
+        .where(SourceDocument.ticker == ticker.upper())
+        .order_by(DocumentChunk.chunk_index)
+    ).all()
+    passages: list[Passage] = []
+    for chunk, document in rows:
+        if needle not in chunk.section or _is_risk_intro(chunk.text):
+            continue
+        passages.append(
+            Passage(
+                chunk_id=chunk.id,
+                ticker=document.ticker,
+                company=document.company,
+                form=document.form,
+                filing_date=document.filing_date,
+                section=chunk.section,
+                source_url=document.source_url,
+                text=chunk.text,
+                chunk_index=chunk.chunk_index,
+            )
+        )
+        if len(passages) == limit:
+            break
+    return passages
+
+
 def search_passages(
     session: Session, question: str, *, ticker: str | None = None, limit: int = 3
 ) -> list[Passage]:
     terms = query_terms(question)
     if not terms:
         return []
+    focus = ticker.upper() if ticker and re.fullmatch(r"[A-Z0-9.]+", ticker.upper()) else None
+    if focus and _asks_about_risks(terms):
+        risks = _section_passages(session, focus, "1A", limit)
+        if risks:
+            return risks
 
+    match = _fts_query(terms)
+    if focus:
+        match = f'({match}) AND "{focus}"'
     rows = session.execute(
         text(
             """
@@ -155,7 +213,7 @@ def search_passages(
             LIMIT 24
             """
         ),
-        {"query": _fts_query(terms)},
+        {"query": match},
     ).all()
 
     if not rows:

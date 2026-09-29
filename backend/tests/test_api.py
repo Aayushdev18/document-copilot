@@ -152,6 +152,39 @@ def test_chat_refuses_when_the_corpus_does_not_cover_the_question(client: TestCl
     assert "does not contain enough evidence" in text
 
 
+def test_risk_question_cites_item_1a_for_the_selected_company(client: TestClient) -> None:
+    headers = _auth(client)
+    response = client.post(
+        "/chat/stream",
+        headers=headers,
+        json={"message": "What were the major risks this year?", "ticker": "AAPL"},
+    )
+    assert response.status_code == 200
+    citations = next(
+        payload for name, payload in _events(response.text) if name == "citations"
+    )["citations"]
+    assert citations
+    assert citations[0]["ticker"] == "AAPL"
+    assert "1A" in citations[0]["section"]
+    assert "paragraph" in citations[0]["locator"]
+
+
+def test_why_revenue_reports_the_change_without_inventing_a_cause(client: TestClient) -> None:
+    headers = _auth(client)
+    response = client.post(
+        "/chat/stream",
+        headers=headers,
+        json={"message": "Why did revenue increase?", "ticker": "AAPL"},
+    )
+    assert response.status_code == 200
+    events = _events(response.text)
+    text = "".join(payload["text"] for name, payload in events if name == "delta")
+    citations = next(payload for name, payload in events if name == "citations")["citations"]
+    assert "$416.2B" in text
+    assert "do not state a cause" in text
+    assert citations == []
+
+
 def test_chat_compares_revenue_from_the_filing_facts(client: TestClient) -> None:
     headers = _auth(client)
     response = client.post(

@@ -47,14 +47,15 @@ def _best_excerpt(passage: Passage, question: str) -> str:
         key=lambda sentence: sum(contains_term(term, sentence.lower()) for term in terms),
         reverse=True,
     )
+    source = " ".join(passage.text.split())
     chosen: list[str] = []
     for sentence in ranked:
         overlap = sum(contains_term(term, sentence.lower()) for term in terms)
         if terms and overlap == 0 and chosen:
             continue
         candidate = " ".join([*chosen, sentence])
-        if chosen and len(candidate) > 480:
-            break
+        if chosen and (len(candidate) > 480 or candidate not in source):
+            continue
         chosen.append(sentence)
         if len(chosen) == 2:
             break

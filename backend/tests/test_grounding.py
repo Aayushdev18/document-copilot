@@ -25,6 +25,27 @@ def test_compose_refuses_when_nothing_was_retrieved() -> None:
     assert "does not contain enough evidence" in answer.answer
 
 
+def test_excerpt_does_not_join_sentences_that_are_apart() -> None:
+    source = Passage(
+        chunk_id="chunk-2",
+        ticker="MSFT",
+        company="Microsoft Corporation",
+        form="10-K",
+        filing_date="2026-07-30",
+        section="Item 7. Management's Discussion and Analysis",
+        source_url="https://www.sec.gov/example",
+        text=(
+            "Reported revenue increased because of services. "
+            "A middle sentence about stores stays here. "
+            "Operating costs increased in the period."
+        ),
+    )
+    answer = compose_answer([source], "Why did revenue and costs increase?")
+    excerpt = answer.citations[0].excerpt
+    assert excerpt in " ".join(source.text.split())
+    validate_grounding(answer, [source])
+
+
 def test_compose_quotes_only_retrieved_text() -> None:
     source = passage()
     answer = compose_answer([source])

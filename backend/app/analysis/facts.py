@@ -77,6 +77,23 @@ def _selected_keys(question: str, available: list[str]) -> list[str]:
     return chosen
 
 
+def supporting_passages(passages: list, question: str) -> list:
+    keys = _selected_keys(question, [key for key, _cues in METRIC_CUES])
+    if not keys:
+        return passages
+    needles = [cue for key, cues in METRIC_CUES if key in keys for cue in cues]
+    matched = [
+        passage
+        for passage in passages
+        if any(cue in passage.text.lower() for cue in needles)
+    ]
+    asks_why = any(word in question.lower() for word in ("why", "cause", "caused", "driver"))
+    if not asks_why:
+        return matched
+    drivers = ("because", "due to", "driven", "primarily", "attributable", "resulted", "reflecting")
+    return [passage for passage in matched if any(cue in passage.text.lower() for cue in drivers)]
+
+
 def financial_preface(ticker: str, question: str) -> str:
     company = company_financials(ticker)
     if company is None:

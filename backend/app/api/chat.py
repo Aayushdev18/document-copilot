@@ -9,7 +9,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
 
-from app.analysis.facts import financial_preface
+from app.analysis.facts import financial_preface, supporting_passages
 from app.auth.dependencies import get_current_user
 from app.chat.orchestrator import compose_answer, stream_pieces
 from app.database.models import (
@@ -264,10 +264,15 @@ def _prepare_turn(
         )
         focus = ticker.upper() if ticker else None
         passages = search_passages(session, message, ticker=focus)
+        if focus:
+            passages = supporting_passages(passages, message)
         preface = financial_preface(focus, message) if focus else ""
         grounded = compose_answer(passages, message)
+        asks_why = any(word in message.lower() for word in ("why", "cause", "caused", "driver"))
         if preface and grounded.insufficient_evidence:
             answer = preface
+            if asks_why:
+                answer += "\n\nThe loaded 10-K passages do not state a cause for that change."
         elif preface:
             answer = f"{preface}\n\n{grounded.answer}"
         else:
