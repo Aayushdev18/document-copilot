@@ -10,9 +10,9 @@ from app.retrieval.retriever import Passage, contains_term, query_terms
 log = structlog.get_logger()
 
 REFUSAL = (
-    "The corpus does not contain enough evidence to answer that. "
-    "I only answer from the loaded 10-K filings, and none of them "
-    "matched this question closely enough to cite."
+    "I couldn't find enough evidence in the loaded 10-K filings to answer "
+    "this confidently. Try asking about revenue, risks, financial performance, "
+    "or another topic covered in the filings."
 )
 
 MODEL_SYSTEM = (
@@ -172,7 +172,7 @@ def compose_answer(passages: list[Passage], question: str = "") -> GroundedAnswe
     return _local_answer(question, passages)
 
 
-def stream_pieces(text: str, words_per_piece: int = 10) -> list[str]:
+def stream_pieces(text: str, words_per_piece: int = 4) -> list[str]:
     words = text.split(" ")
     pieces: list[str] = []
     for start in range(0, len(words), words_per_piece):

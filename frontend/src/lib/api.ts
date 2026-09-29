@@ -2,6 +2,7 @@ import { ApiError, request, requestJson } from "@/lib/http"
 import type {
   AnalystBrief,
   Citation,
+  Comparison,
   CompanySnapshot,
   Corpus,
   Session,
@@ -30,7 +31,13 @@ async function readStream(response: Response, onEvent: StreamHandler): Promise<v
         if (line.startsWith("event:")) event = line.slice(6).trim()
         else if (line.startsWith("data:")) data += line.slice(5).trim()
       }
-      if (data) onEvent(event, JSON.parse(data) as Record<string, unknown>)
+      if (data) {
+        const parsed = JSON.parse(data) as Record<string, unknown>
+        onEvent(event, parsed)
+        if (event === "delta") {
+          await new Promise((resolve) => setTimeout(resolve, 28))
+        }
+      }
     }
   }
 }
@@ -56,6 +63,9 @@ export const api = {
   },
   brief(ticker: string) {
     return requestJson<AnalystBrief>(`/companies/${ticker}/brief`, { method: "POST" })
+  },
+  compare(tickers: string[]) {
+    return requestJson<Comparison>("/companies/compare", { method: "POST", body: { tickers } })
   },
   async streamChat(
     message: string,

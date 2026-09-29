@@ -135,7 +135,13 @@ export function CompanyDesk({
               onOpenCitation={onOpenCitation}
             />
           )}
-          {panel === "compare" && <ComparePanel filings={filings} snapshots={snapshots} />}
+          {panel === "compare" && (
+            <ComparePanel
+              filings={filings}
+              snapshots={snapshots}
+              onOpenCitation={onOpenCitation}
+            />
+          )}
         </div>
       )}
     </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 
 import { Badge } from "@/components/ui/badge"
-import { filingLinks, sourceTrail } from "@/lib/sources"
+import { sourceTrail, xbrlCitations } from "@/lib/sources"
 import type { ChatMessage, Citation } from "@/lib/types"
 
 type TranscriptProps = {
@@ -10,6 +10,7 @@ type TranscriptProps = {
   running: boolean
   error: string | null
   companyName: string
+  ticker: string
   prompts: string[]
   onSuggest: (question: string) => void
   onOpenCitation: (citation: Citation) => void
@@ -21,6 +22,7 @@ export function Transcript({
   running,
   error,
   companyName,
+  ticker,
   prompts,
   onSuggest,
   onOpenCitation,
@@ -71,7 +73,13 @@ export function Transcript({
         )}
 
         {messages.map((message) => (
-          <MessageView key={message.id} message={message} onOpenCitation={onOpenCitation} />
+          <MessageView
+            key={message.id}
+            message={message}
+            companyName={companyName}
+            ticker={ticker}
+            onOpenCitation={onOpenCitation}
+          />
         ))}
 
         {running && !streaming && (
@@ -83,7 +91,10 @@ export function Transcript({
             <p className="mb-2 text-[11px] tracking-[0.14em] text-muted-foreground uppercase">
               Answer
             </p>
-            <div className="text-[15px] leading-7 whitespace-pre-wrap">{streaming}</div>
+            <div className="text-[15px] leading-7 whitespace-pre-wrap">
+              {streaming}
+              <span className="ml-0.5 inline-block h-4 w-px animate-pulse bg-foreground align-middle" />
+            </div>
           </article>
         )}
 
@@ -100,9 +111,13 @@ export function Transcript({
 
 function MessageView({
   message,
+  companyName,
+  ticker,
   onOpenCitation,
 }: {
   message: ChatMessage
+  companyName: string
+  ticker: string
   onOpenCitation: (citation: Citation) => void
 }) {
   if (message.role === "user") {
@@ -115,7 +130,7 @@ function MessageView({
     )
   }
 
-  const links = filingLinks(message.content)
+  const facts = message.citations.length === 0 ? xbrlCitations(message.content, companyName, ticker) : []
   return (
     <article className="max-w-[46rem]">
       <p className="mb-2 text-[11px] tracking-[0.14em] text-muted-foreground uppercase">Answer</p>
@@ -135,26 +150,21 @@ function MessageView({
             ))}
           </ul>
         )}
-        {message.citations.length === 0 && links.length > 0 && (
+        {facts.length > 0 && (
           <ul className="mt-2 flex flex-col gap-2">
-            {links.map((url) => (
-              <li key={url}>
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm text-primary underline-offset-2 hover:underline"
-                >
-                  SEC XBRL company facts
-                </a>
+            {facts.map((citation) => (
+              <li key={citation.chunkId}>
+                <button type="button" className="text-left" onClick={() => onOpenCitation(citation)}>
+                  <Badge variant="outline" className="h-auto max-w-full px-2.5 py-1 font-mono whitespace-normal">
+                    {sourceTrail(citation)}
+                  </Badge>
+                </button>
               </li>
             ))}
           </ul>
         )}
-        {message.citations.length === 0 && links.length === 0 && (
-          <p className="mt-2 text-sm text-muted-foreground">
-            No filing passage supports this answer.
-          </p>
+        {message.citations.length === 0 && facts.length === 0 && (
+          <p className="mt-2 text-sm text-muted-foreground">No supporting passage found.</p>
         )}
       </div>
     </article>

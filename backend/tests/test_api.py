@@ -164,7 +164,8 @@ def test_chat_refuses_when_the_corpus_does_not_cover_the_question(client: TestCl
     citations = next(payload for name, payload in events if name == "citations")["citations"]
     assert citations == []
     text = "".join(payload["text"] for name, payload in events if name == "delta")
-    assert "does not contain enough evidence" in text
+    assert "couldn't find enough evidence" in text
+    assert "Try asking about revenue" in text
 
 
 def test_risk_question_cites_item_1a_for_the_selected_company(client: TestClient) -> None:
@@ -213,6 +214,23 @@ def test_chat_compares_revenue_from_the_filing_facts(client: TestClient) -> None
     )
     assert "$416.2B" in text
     assert "0000320193-25-000079" in text
+
+
+def test_compare_writes_a_sourced_note(client: TestClient) -> None:
+    headers = _auth(client)
+    response = client.post(
+        "/companies/compare",
+        headers=headers,
+        json={"tickers": ["AAPL", "MSFT"]},
+    )
+    assert response.status_code == 200
+    body = response.json()
+    assert body["headline"] == "Apple vs Microsoft"
+    assert "$416.2B" in body["narrative"]
+    assert "$331.8B" in body["narrative"]
+    assert body["sources"]
+    assert body["sources"][0]["locator"] == "Item 8 · SEC XBRL"
+    assert "sec.gov" in body["sources"][0]["sourceUrl"]
 
 
 def test_company_snapshot_and_brief(client: TestClient) -> None:

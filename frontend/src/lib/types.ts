@@ -81,11 +81,18 @@ export type CompanySnapshot = {
   factsUrl: string
   industry: string
   overview: string
+  segments: string
   metrics: FinancialMetric[]
   risks: { title: string; text: string; citation: Citation }[]
 }
 
 export type DeskPanel = "snapshot" | "risks" | "chat" | "brief" | "compare"
+
+export type Comparison = {
+  headline: string
+  narrative: string
+  sources: Citation[]
+}
 
 export type AnalystBrief = {
   ticker: string

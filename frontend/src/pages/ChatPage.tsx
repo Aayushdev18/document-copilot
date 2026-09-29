@@ -304,6 +304,7 @@ export function ChatPage() {
               running={running}
               error={error}
               companyName={snapshot?.company ?? ticker}
+              ticker={ticker}
               prompts={filingPrompts(currentYear, priorYear)}
               onSuggest={(question) => {
                 void ask(question)

@@ -22,7 +22,8 @@ def test_compose_refuses_when_nothing_was_retrieved() -> None:
     answer = compose_answer([])
     assert answer.insufficient_evidence
     assert answer.citations == []
-    assert "does not contain enough evidence" in answer.answer
+    assert "couldn't find enough evidence" in answer.answer
+    assert "Try asking about revenue" in answer.answer
 
 
 def test_excerpt_does_not_join_sentences_that_are_apart() -> None:

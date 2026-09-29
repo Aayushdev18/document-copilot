@@ -137,6 +137,35 @@ def overview_sentence(session: Session, ticker: str) -> str:
     return choose_overview(sentences)
 
 
+def _item_sentences(text: str) -> list[str]:
+    collapsed = " ".join(text.split())
+    return [part.strip() for part in re.split(r"(?<=[.!?])\s+", collapsed) if part.strip()]
+
+
+def segment_sentence(session: Session, ticker: str) -> str:
+    ranked: list[tuple[int, str]] = []
+    for chunk in section_chunks(session, ticker, "Item 1."):
+        for sentence in _item_sentences(chunk.text):
+            lowered = sentence.lower()
+            if "segment" not in lowered or len(sentence) < 40:
+                continue
+            if any(word in lowered for word in ("competition", "competitor", "competitors")):
+                continue
+            score = 0
+            if "reportable segment" in lowered or "segments consist" in lowered:
+                score += 3
+            if any(
+                phrase in lowered
+                for phrase in ("organized", "three segments", "two segments", "report our")
+            ):
+                score += 2
+            ranked.append((score, sentence))
+    if not ranked:
+        return overview_sentence(session, ticker)
+    ranked.sort(key=lambda item: item[0], reverse=True)
+    return ranked[0][1]
+
+
 def risk_items(session: Session, ticker: str, limit: int = 6) -> list[dict]:
     grouped: dict[str, list[dict]] = {}
     seen: list[str] = []

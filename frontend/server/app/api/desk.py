@@ -2,12 +2,14 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy.orm import Session
 
+from app.analysis.compare import build_comparison
 from app.analysis.desk import (
     build_brief,
     filing_for,
     industry_label,
     overview_sentence,
     risk_items,
+    segment_sentence,
 )
 from app.analysis.facts import company_financials, metric_rows
 from app.auth.dependencies import get_current_user
@@ -74,6 +76,7 @@ class SnapshotOut(BaseModel):
     facts_url: str = Field(serialization_alias="factsUrl")
     industry: str
     overview: str
+    segments: str
     metrics: list[MetricOut]
     risks: list[RiskOut]
 
@@ -168,6 +171,7 @@ async def company_snapshot(
         facts_url=company["factsUrl"],
         industry=industry_label(company["ticker"]),
         overview=overview_sentence(session, company["ticker"]),
+        segments=segment_sentence(session, company["ticker"]),
         metrics=[_metric_out(row) for row in metric_rows(ticker)],
         risks=risks,
     )
@@ -197,3 +201,32 @@ async def company_brief(
             )
         )
     return BriefOut(ticker=brief["ticker"], company=brief["company"], sections=sections)
+
+
+class CompareIn(BaseModel):
+    tickers: list[str] = Field(min_length=2, max_length=5)
+
+
+class CompareOut(BaseModel):
+    headline: str
+    narrative: str
+    sources: list[DeskCitation]
+
+
+@router.post("/companies/compare", response_model=CompareOut)
+async def compare_companies(
+    body: CompareIn,
+    _user: User = Depends(get_current_user),
+    session: Session = Depends(get_db),
+) -> CompareOut:
+    for ticker in body.tickers:
+        _require_company(ticker)
+    try:
+        result = build_comparison(session, body.tickers)
+    except ValueError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    return CompareOut(
+        headline=result["headline"],
+        narrative=result["narrative"],
+        sources=[DeskCitation(**source) for source in result["sources"]],
+    )
