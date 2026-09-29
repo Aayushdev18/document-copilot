@@ -1,4 +1,6 @@
 import json
+import re
+from dataclasses import replace
 from functools import lru_cache
 from pathlib import Path
 
@@ -91,7 +93,19 @@ def supporting_passages(passages: list, question: str) -> list:
     if not asks_why:
         return matched
     drivers = ("because", "due to", "driven", "primarily", "attributable", "resulted", "reflecting")
-    return [passage for passage in matched if any(cue in passage.text.lower() for cue in drivers)]
+    focused = []
+    for passage in matched:
+        chosen = []
+        collapsed = " ".join(passage.text.split())
+        for sentence in re.split(r"(?<=[.!?])\s+", collapsed):
+            lowered = sentence.lower()
+            metric = any(cue in lowered for cue in needles)
+            cause = any(cue in lowered for cue in drivers)
+            if metric and cause:
+                chosen.append(sentence.strip())
+        if chosen:
+            focused.append(replace(passage, text=" ".join(chosen)))
+    return focused
 
 
 def financial_preface(ticker: str, question: str) -> str:
