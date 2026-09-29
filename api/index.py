@@ -12,6 +12,8 @@ from app.database.seed import seed_if_empty  # noqa: E402
 from app.database.session import configure_engine, open_session  # noqa: E402
 from app.main import app  # noqa: E402
 
+_ready = False
+
 
 def _boot() -> None:
     settings = get_settings()
@@ -25,7 +27,14 @@ def _boot() -> None:
             session.close()
 
 
-_boot()
+@app.middleware("http")
+async def boot_database(request, call_next):
+    global _ready
+    if not _ready:
+        _boot()
+        _ready = True
+    return await call_next(request)
+
 
 DIST = ROOT / "frontend" / "dist"
 INDEX = DIST / "index.html"
