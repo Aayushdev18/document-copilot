@@ -6,7 +6,26 @@ from fastapi.responses import FileResponse
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
+from app.config import get_settings  # noqa: E402
+from app.database.schema import prepare_database  # noqa: E402
+from app.database.seed import seed_if_empty  # noqa: E402
+from app.database.session import configure_engine, open_session  # noqa: E402
 from app.main import app  # noqa: E402
+
+
+def _boot() -> None:
+    settings = get_settings()
+    db_engine = configure_engine(settings.database_url)
+    prepare_database(db_engine)
+    if settings.seed_on_startup:
+        session = open_session()
+        try:
+            seed_if_empty(session)
+        finally:
+            session.close()
+
+
+_boot()
 
 DIST = ROOT / "frontend" / "dist"
 INDEX = DIST / "index.html"
