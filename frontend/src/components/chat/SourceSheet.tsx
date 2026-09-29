@@ -34,11 +34,16 @@ export function SourceSheet({ citation, onClose }: SourceSheetProps) {
               </Badge>
               <SheetTitle className="font-heading text-xl">{citation.company}</SheetTitle>
               <SheetDescription>
-                Filed {citation.filingDate} · {citation.section}
+                {citation.locator ?? citation.section}
+                {citation.locator ? "" : ` · Filed ${citation.filingDate}`}
               </SheetDescription>
             </SheetHeader>
             <div className="px-4 pb-8">
-              <p className="text-sm leading-7 break-words whitespace-pre-wrap">{citation.passage}</p>
+              <p className="font-mono text-[11px] text-muted-foreground">
+                Filed {citation.filingDate}
+                {citation.paragraph ? ` · paragraph ${citation.paragraph}` : ""}
+              </p>
+              <p className="mt-3 text-sm leading-7 break-words whitespace-pre-wrap">{citation.passage}</p>
               <a
                 href={citation.sourceUrl}
                 target="_blank"

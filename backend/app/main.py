@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.auth import router as auth_router
 from app.api.chat import router as chat_router
+from app.api.desk import router as desk_router
 from app.config import get_settings
 from app.database.schema import prepare_database
 from app.database.seed import seed_if_empty
@@ -48,8 +49,10 @@ def create_app() -> FastAPI:
     )
     app.include_router(auth_router)
     app.include_router(chat_router)
+    app.include_router(desk_router)
     app.include_router(auth_router, prefix="/api")
     app.include_router(chat_router, prefix="/api")
+    app.include_router(desk_router, prefix="/api")
 
     @app.get("/health")
     @app.get("/api/health")

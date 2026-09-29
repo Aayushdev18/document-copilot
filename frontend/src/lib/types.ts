@@ -21,6 +21,8 @@ export type Citation = {
   filingDate: string
   section: string
   sourceUrl: string
+  paragraph?: number
+  locator?: string
 }
 
 export type ChatMessage = {
@@ -49,4 +51,44 @@ export type Corpus = {
   documentCount: number
   passageCount: number
   filings: Filing[]
+}
+
+export type FactYear = {
+  year: string
+  end: string
+  display: string
+  accession: string
+  filed: string
+  sourceUrl: string
+}
+
+export type FinancialMetric = {
+  key: string
+  label: string
+  concept: string
+  current: FactYear
+  prior: FactYear
+  change: string
+}
+
+export type CompanySnapshot = {
+  ticker: string
+  company: string
+  form: string
+  filingDate: string
+  sourceUrl: string
+  factsUrl: string
+  metrics: FinancialMetric[]
+  risks: { text: string; citation: Citation }[]
+}
+
+export type AnalystBrief = {
+  ticker: string
+  company: string
+  sections: {
+    id: string
+    heading: string
+    body: string
+    citations: Citation[]
+  }[]
 }

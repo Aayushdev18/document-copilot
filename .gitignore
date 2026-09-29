@@ -42,3 +42,5 @@ logs/
 
 # Local database
 *.db
+.vercel
+public/

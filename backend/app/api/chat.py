@@ -9,6 +9,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
 
+from app.analysis.facts import financial_preface
 from app.auth.dependencies import get_current_user
 from app.chat.orchestrator import compose_answer, stream_pieces
 from app.database.models import (
@@ -46,6 +47,8 @@ class CitationOut(BaseModel):
     filing_date: str = Field(serialization_alias="filingDate")
     section: str
     source_url: str = Field(serialization_alias="sourceUrl")
+    paragraph: int | None = None
+    locator: str | None = None
 
 
 class MessageOut(BaseModel):
@@ -68,6 +71,7 @@ class ChatRequest(BaseModel):
 
     message: str = Field(min_length=1, max_length=4000)
     thread_id: str | None = Field(default=None, alias="threadId")
+    ticker: str | None = None
 
 
 class FilingOut(BaseModel):
@@ -119,6 +123,8 @@ def _citation_out(citation: MessageCitation) -> CitationOut:
         filing_date=document.filing_date,
         section=chunk.section,
         source_url=document.source_url,
+        paragraph=chunk.chunk_index + 1,
+        locator=f"{chunk.section} · paragraph {chunk.chunk_index + 1}",
     )
 
 
@@ -227,7 +233,7 @@ async def delete_thread(
 
 
 def _prepare_turn(
-    user_id: str, message: str, thread_id: str | None
+    user_id: str, message: str, thread_id: str | None, ticker: str | None = None
 ) -> tuple[str, str, str, list[dict]]:
     session = open_session()
     try:
@@ -256,17 +262,29 @@ def _prepare_turn(
                 created_at=now,
             )
         )
-        passages = search_passages(session, message)
+        focus = ticker.upper() if ticker else None
+        passages = search_passages(session, message, ticker=focus)
+        preface = financial_preface(focus, message) if focus else ""
         grounded = compose_answer(passages, message)
+        if preface and grounded.insufficient_evidence:
+            answer = preface
+        elif preface:
+            answer = f"{preface}\n\n{grounded.answer}"
+        else:
+            answer = grounded.answer
         by_chunk = {passage.chunk_id: passage for passage in passages}
         payloads: list[dict] = []
-        for citation in grounded.citations:
-            payload = citation.model_dump(by_alias=True)
-            payload["passage"] = by_chunk[citation.chunk_id].text
-            payloads.append(payload)
+        if passages:
+            for citation in grounded.citations:
+                payload = citation.model_dump(by_alias=True)
+                passage = by_chunk[citation.chunk_id]
+                payload["passage"] = passage.text
+                payload["paragraph"] = passage.chunk_index + 1
+                payload["locator"] = f"{passage.section} · paragraph {passage.chunk_index + 1}"
+                payloads.append(payload)
         thread.updated_at = now
         session.commit()
-        return thread.id, thread.title, grounded.answer, payloads
+        return thread.id, thread.title, answer, payloads
     finally:
         session.close()
 
@@ -313,7 +331,7 @@ async def stream_chat(
     if not message:
         raise HTTPException(status_code=422, detail="Enter a question.")
     thread_id, title, answer, citation_payloads = await asyncio.to_thread(
-        _prepare_turn, user.id, message, body.thread_id
+        _prepare_turn, user.id, message, body.thread_id, body.ticker
     )
 
     def events() -> Iterator[str]:

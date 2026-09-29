@@ -1,15 +1,15 @@
 import { useEffect, useRef } from "react"
 
 import { Badge } from "@/components/ui/badge"
-import { suggestedQuestions } from "@/lib/questions"
-import type { ChatMessage, Citation, Corpus } from "@/lib/types"
+import type { ChatMessage, Citation } from "@/lib/types"
 
 type TranscriptProps = {
   messages: ChatMessage[]
   streaming: string
   running: boolean
   error: string | null
-  corpus: Corpus | null
+  companyName: string
+  prompts: string[]
   onSuggest: (question: string) => void
   onOpenCitation: (citation: Citation) => void
 }
@@ -19,7 +19,8 @@ export function Transcript({
   streaming,
   running,
   error,
-  corpus,
+  companyName,
+  prompts,
   onSuggest,
   onOpenCitation,
 }: TranscriptProps) {
@@ -40,28 +41,21 @@ export function Transcript({
               Driftwood Capital
             </p>
             <h1 className="mt-3 font-heading text-4xl tracking-tight text-balance md:text-5xl">
-              Ask a filing.
+              Ask {companyName}.
             </h1>
             <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
-              Answers are written in prose from the latest 10-K on the desk for Apple,
-              Microsoft, NVIDIA, Amazon, and Alphabet, and every claim stays tied to a
-              passage. If the filings do not cover the question, the copilot says so.
+              Questions stay on this company&apos;s latest 10-K. Financial figures come from
+              the filing&apos;s annual facts, and every passage keeps its section and paragraph.
             </p>
-            {corpus && (
-              <p className="mt-3 font-mono text-xs text-muted-foreground">
-                {corpus.filings.map((filing) => `${filing.ticker} ${filing.filingDate}`).join("  ·  ")}
-              </p>
-            )}
             <div className="mt-8 grid gap-2">
-              {suggestedQuestions.map((item) => (
+              {prompts.map((question) => (
                 <button
-                  key={item.question}
+                  key={question}
                   type="button"
-                  onClick={() => onSuggest(item.question)}
+                  onClick={() => onSuggest(question)}
                   className="rounded-xl border bg-card px-4 py-3 text-left text-sm leading-6 transition-colors hover:border-primary/40 hover:bg-accent"
                 >
-                  <span className="mr-2 font-mono text-[11px] text-primary">{item.ticker}</span>
-                  {item.question}
+                  {question}
                 </button>
               ))}
               <button
@@ -129,7 +123,7 @@ function MessageView({
           {message.citations.map((citation) => (
             <button key={citation.chunkId} type="button" onClick={() => onOpenCitation(citation)}>
               <Badge variant="outline" className="h-7 px-2.5 font-mono">
-                [{citation.label}] {citation.ticker} · {citation.section.replace("Item ", "")}
+                [{citation.label}] {citation.locator ?? `${citation.ticker} · ${citation.section}`}
               </Badge>
             </button>
           ))}

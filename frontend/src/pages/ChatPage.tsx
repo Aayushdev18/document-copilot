@@ -6,12 +6,19 @@ import { Composer } from "@/components/chat/Composer"
 import { DeskNav } from "@/components/chat/DeskNav"
 import { SourceSheet } from "@/components/chat/SourceSheet"
 import { Transcript } from "@/components/chat/Transcript"
+import { CompanyDesk } from "@/components/desk/CompanyDesk"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { api, isCitationList } from "@/lib/api"
 import { useAuth } from "@/lib/auth"
 import { ApiError, errorMessage } from "@/lib/http"
-import type { ChatMessage, Citation, Corpus, ThreadSummary } from "@/lib/types"
+import type { AnalystBrief, ChatMessage, Citation, CompanySnapshot, Corpus, ThreadSummary } from "@/lib/types"
+
+const companyPrompts = [
+  "What were the major risks this year?",
+  "Why did revenue increase?",
+  "Compare this year's revenue with last year.",
+]
 
 export function ChatPage() {
   const { threadId } = useParams()
@@ -26,6 +33,12 @@ export function ChatPage() {
   const [loading, setLoading] = useState(false)
   const [navOpen, setNavOpen] = useState(false)
   const [citation, setCitation] = useState<Citation | null>(null)
+  const [ticker, setTicker] = useState("AAPL")
+  const [panel, setPanel] = useState<"snapshot" | "risks" | "chat" | "brief">("snapshot")
+  const [snapshot, setSnapshot] = useState<CompanySnapshot | null>(null)
+  const [brief, setBrief] = useState<AnalystBrief | null>(null)
+  const [briefing, setBriefing] = useState(false)
+  const [briefError, setBriefError] = useState<string | null>(null)
   const skipLoad = useRef<string | null>(null)
   const citations = useRef<Citation[]>([])
 
@@ -103,8 +116,40 @@ export function ChatPage() {
     setError(errorMessage(caught))
   }
 
+  useEffect(() => {
+    if (!session) return
+    let cancelled = false
+    setSnapshot(null)
+    api
+      .snapshot(ticker)
+      .then((next) => {
+        if (!cancelled) setSnapshot(next)
+      })
+      .catch((caught) => {
+        if (!cancelled) setError(errorMessage(caught))
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [session, ticker])
+
+  async function generateBrief() {
+    setBriefing(true)
+    setBriefError(null)
+    setPanel("brief")
+    try {
+      setBrief(await api.brief(ticker))
+    } catch (caught) {
+      setBrief(null)
+      setBriefError(errorMessage(caught))
+    } finally {
+      setBriefing(false)
+    }
+  }
+
   async function ask(question: string) {
     if (!session || running) return
+    setPanel("chat")
     setError(null)
     setRunning(true)
     setStreaming("")
@@ -120,7 +165,7 @@ export function ChatPage() {
     let nextThreadId = threadId ?? null
     let assembled = ""
     try {
-      await api.streamChat(question, threadId ?? null, (event, data) => {
+      await api.streamChat(question, threadId ?? null, ticker, (event, data) => {
         if (event === "thread" && typeof data.id === "string") {
           nextThreadId = data.id
           if (!threadId) skipLoad.current = data.id
@@ -195,7 +240,7 @@ export function ChatPage() {
           {nav}
         </SheetContent>
       </Sheet>
-      <main className="flex min-w-0 flex-1 flex-col">
+        <main className="flex min-w-0 flex-1 flex-col">
         <header className="flex items-center gap-2 border-b px-3 py-2 md:hidden">
           <Button
             type="button"
@@ -208,24 +253,51 @@ export function ChatPage() {
           </Button>
           <p className="font-heading text-lg">Document Copilot</p>
         </header>
-        {loading ? (
-          <div className="flex flex-1 items-center justify-center text-sm text-muted-foreground">
-            Opening the conversation…
-          </div>
-        ) : (
-          <Transcript
-            messages={messages}
-            streaming={streaming}
+        <CompanyDesk
+          filings={corpus?.filings ?? []}
+          ticker={ticker}
+          panel={panel}
+          snapshot={snapshot}
+          brief={brief}
+          briefError={briefError}
+          briefing={briefing}
+          onSelect={(next) => {
+            setTicker(next)
+            setBrief(null)
+            setBriefError(null)
+          }}
+          onPanel={setPanel}
+          onBrief={() => {
+            void generateBrief()
+          }}
+          onOpenCitation={setCitation}
+        />
+        {panel === "chat" &&
+          (loading ? (
+            <div className="flex flex-1 items-center justify-center text-sm text-muted-foreground">
+              Opening the conversation…
+            </div>
+          ) : (
+            <Transcript
+              messages={messages}
+              streaming={streaming}
+              running={running}
+              error={error}
+              companyName={snapshot?.company ?? ticker}
+              prompts={companyPrompts}
+              onSuggest={(question) => {
+                void ask(question)
+              }}
+              onOpenCitation={setCitation}
+            />
+          ))}
+        {panel === "chat" && (
+          <Composer
             running={running}
-            error={error}
-            corpus={corpus}
-            onSuggest={(question) => {
-              void ask(question)
-            }}
-            onOpenCitation={setCitation}
+            placeholder={`Ask ${snapshot?.company ?? ticker} about its 10-K…`}
+            onSubmit={(question) => void ask(question)}
           />
         )}
-        <Composer running={running} onSubmit={(question) => void ask(question)} />
       </main>
       <SourceSheet citation={citation} onClose={() => setCitation(null)} />
       <Outlet />

@@ -152,7 +152,35 @@ def test_chat_refuses_when_the_corpus_does_not_cover_the_question(client: TestCl
     assert "does not contain enough evidence" in text
 
 
-def test_threads_are_private(client: TestClient) -> None:
+def test_chat_compares_revenue_from_the_filing_facts(client: TestClient) -> None:
+    headers = _auth(client)
+    response = client.post(
+        "/chat/stream",
+        headers=headers,
+        json={"message": "Compare this year's revenue with last year.", "ticker": "AAPL"},
+    )
+    assert response.status_code == 200
+    text = "".join(
+        payload["text"] for _name, payload in _events(response.text) if _name == "delta"
+    )
+    assert "$416.2B" in text
+    assert "0000320193-25-000079" in text
+
+
+def test_company_snapshot_and_brief(client: TestClient) -> None:
+    headers = _auth(client)
+    snapshot = client.get("/companies/AAPL", headers=headers)
+    assert snapshot.status_code == 200
+    revenue = next(metric for metric in snapshot.json()["metrics"] if metric["key"] == "revenue")
+    assert revenue["current"]["display"] == "$416.2B"
+    assert revenue["change"] == "+6.4%"
+    assert revenue["current"]["sourceUrl"].startswith("https://www.sec.gov/")
+    brief = client.post("/companies/AAPL/brief", headers=headers)
+    assert brief.status_code == 200
+    headings = [section["heading"] for section in brief.json()["sections"]]
+    assert "Financial performance" in headings
+    assert "Key risks" in headings
+    assert "Important takeaways" in headings
     owner = _auth(client, "owner@driftwood.example")
     created = client.post(
         "/chat/stream",

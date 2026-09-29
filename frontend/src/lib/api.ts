@@ -1,5 +1,13 @@
 import { ApiError, request, requestJson } from "@/lib/http"
-import type { Citation, Corpus, Session, ThreadDetail, ThreadSummary } from "@/lib/types"
+import type {
+  AnalystBrief,
+  Citation,
+  CompanySnapshot,
+  Corpus,
+  Session,
+  ThreadDetail,
+  ThreadSummary,
+} from "@/lib/types"
 
 export type StreamHandler = (event: string, data: Record<string, unknown>) => void
 
@@ -43,10 +51,21 @@ export const api = {
   deleteThread(threadId: string) {
     return requestJson<void>(`/threads/${threadId}`, { method: "DELETE" })
   },
-  async streamChat(message: string, threadId: string | null, onEvent: StreamHandler) {
+  snapshot(ticker: string) {
+    return requestJson<CompanySnapshot>(`/companies/${ticker}`)
+  },
+  brief(ticker: string) {
+    return requestJson<AnalystBrief>(`/companies/${ticker}/brief`, { method: "POST" })
+  },
+  async streamChat(
+    message: string,
+    threadId: string | null,
+    ticker: string,
+    onEvent: StreamHandler,
+  ) {
     const response = await request("/chat/stream", {
       method: "POST",
-      body: { message, threadId },
+      body: { message, threadId, ticker },
     })
     if (!response.ok) {
       let detail = "The request failed."

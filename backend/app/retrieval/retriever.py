@@ -106,6 +106,7 @@ class Passage:
     section: str
     source_url: str
     text: str
+    chunk_index: int = 0
 
 
 def query_terms(question: str) -> list[str]:
@@ -137,7 +138,9 @@ def contains_term(term: str, text_lower: str) -> bool:
     )
 
 
-def search_passages(session: Session, question: str, *, limit: int = 3) -> list[Passage]:
+def search_passages(
+    session: Session, question: str, *, ticker: str | None = None, limit: int = 3
+) -> list[Passage]:
     terms = query_terms(question)
     if not terms:
         return []
@@ -170,11 +173,14 @@ def search_passages(session: Session, question: str, *, limit: int = 3) -> list[
 
     needed = 2 if len(content_terms) >= 2 else 1
     eligible = [chunk_id for chunk_id in lexical_ids if hits(chunk_id) >= needed]
-    named = {TICKER_ALIASES[term] for term in terms if term in TICKER_ALIASES}
-    if named:
-        focused = [chunk_id for chunk_id in eligible if by_id[chunk_id].ticker in named]
-        if focused:
-            eligible = focused
+    if ticker:
+        eligible = [chunk_id for chunk_id in eligible if by_id[chunk_id].ticker == ticker.upper()]
+    else:
+        named = {TICKER_ALIASES[term] for term in terms if term in TICKER_ALIASES}
+        if named:
+            focused = [chunk_id for chunk_id in eligible if by_id[chunk_id].ticker in named]
+            if focused:
+                eligible = focused
     if not eligible:
         return []
 
@@ -205,6 +211,7 @@ def _load_passages(session: Session, chunk_ids: list[str]) -> dict[str, Passage]
             section=chunk.section,
             source_url=document.source_url,
             text=chunk.text,
+            chunk_index=chunk.chunk_index,
         )
         for chunk, document in rows
     }

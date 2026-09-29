@@ -6,10 +6,11 @@ import { Textarea } from "@/components/ui/textarea"
 
 type ComposerProps = {
   running: boolean
+  placeholder?: string
   onSubmit: (question: string) => void
 }
 
-export function Composer({ running, onSubmit }: ComposerProps) {
+export function Composer({ running, placeholder = "Ask about a filing…", onSubmit }: ComposerProps) {
   const [value, setValue] = useState("")
 
   function submit() {
@@ -39,7 +40,7 @@ export function Composer({ running, onSubmit }: ComposerProps) {
           value={value}
           onChange={(event) => setValue(event.target.value)}
           onKeyDown={onKeyDown}
-          placeholder="Ask about a filing…"
+          placeholder={placeholder}
           rows={2}
           className="min-h-14 flex-1 resize-none bg-card text-sm"
           aria-label="Question"
